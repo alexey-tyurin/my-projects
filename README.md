@@ -227,12 +227,12 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📊 Project Statistics
 
-- **Total Projects:** 5 major projects
+- **Total Projects:** 5 major projects including POCs optimized for production
 - **GitHub Stars:** 11 across repositories
 - **Technologies Used:** 15+ AI/ML frameworks and tools
-- **Cloud Platforms:** Google Cloud Platform (primary), with multi-cloud expertise
+- **Cloud Platforms:** Google VertexAI Cloud Platform, OpenAI API, Meta, HuggingFace with multi-cloud expertise
 - **Programming Languages:** Python (primary), JavaScript, SQL, Shell scripting
-- **AI Models Integrated:** GPT-4, GPT-4o-mini, Gemini 2.0 Flash, Gemma 3, Llama Prompt Guard 2
+- **AI Models Integrated:** GPT-4, GPT-4o-mini, Gemini 2.0 Flash, Gemma 3, Llama, Llama Prompt Guard 2
 
 ## 🎯 Key Achievements
 
