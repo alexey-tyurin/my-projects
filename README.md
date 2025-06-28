@@ -8,18 +8,18 @@ I am a GenAI engineer specializing in optimization, autonomy, and security of Ag
 
 ### 🚀 Skills and Interests
 
-- **AI/ML Technologies:** Large Language Models (LLMs), Fine-tuning, Multi-agent Systems, Reinforcement Learning
-- **AI Frameworks:** LangGraph, LangChain, OpenAI GPT, Google ADK, Model Context Protocol (MCP)
+- **AI/ML Technologies:** Agentic AI, Large Language Models (LLMs), Small Language Models (SLMs), Fine-tuning, Multi-agent Systems
+- **AI Frameworks:** LangGraph, LangChain, OpenAI GPT, Google ADK, Google A2A Protocol, Model Context Protocol (MCP)
 - **Specialized Areas:** Content Moderation, Prompt Security, AI Agent Orchestration, Imbalanced Dataset Handling
 - **Cloud Platforms:** Google Cloud Platform (Vertex AI), Cloud Run, Docker, Kubernetes
-- **Programming:** Python, JavaScript, SQL
+- **Programming:** Python, Java, JavaScript, SQL
 - **Research Focus:** Autonomous AI systems, AI safety, production optimization, cost-effective AI deployment
 
 ---
 
 ## 🏆 Featured Projects
 
-### 1. A2A Double Validation - Multi-Agent Safety System
+### 1. A2A Double Validation - POC for Multi-Agent autonomous System
 **Repository:** [https://github.com/alexey-tyurin/a2a-double-validation](https://github.com/alexey-tyurin/a2a-double-validation)
 
 #### 📋 Description
@@ -97,7 +97,7 @@ Deployment: API integration, cost optimization
 
 ---
 
-### 3. AI Agent MCP - Content Moderation System
+### 3. AI Agent with MCP - Content Moderation System
 **Repository:** [https://github.com/alexey-tyurin/ai-agent-mcp](https://github.com/alexey-tyurin/ai-agent-mcp)
 
 #### 📋 Description
@@ -149,7 +149,6 @@ An intelligent agent that searches, analyzes, and ranks arXiv research papers us
 
 #### 🔧 Key Features
 - **Automated Literature Review:** Intelligent search and analysis of arXiv research papers
-- **Multi-Source Integration:** Combines arXiv API with web search for comprehensive coverage
 - **Intelligent Ranking:** AI-powered relevance scoring and paper prioritization
 - **Agent Architecture:** LangGraph-based workflow for complex research tasks
 - **Research Optimization:** Saves researchers significant time in literature discovery
@@ -215,7 +214,7 @@ Visualization: matplotlib, seaborn, plotly
 ## 📊 Project Statistics
 
 - **Total Projects:** 5 major projects
-- **GitHub Stars:** 7+ across repositories
+- **GitHub Stars:** 11 across repositories
 - **Technologies Used:** 15+ AI/ML frameworks and tools
 - **Cloud Platforms:** Google Cloud Platform (primary), with multi-cloud expertise
 - **Programming Languages:** Python (primary), JavaScript, SQL, Shell scripting
@@ -231,10 +230,8 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📈 Impact Metrics
 
-- **Performance Improvements:** Up to 15% accuracy gains through specialized model optimization
+- **Performance Improvements:** 130% accuracy improvement over the base model through specialized model optimization
 - **Cost Savings:** Up to 90% reduction in operational costs through efficient architecture
-- **Security Enhancement:** Zero security incidents in production deployments with robust validation systems
-- **Development Efficiency:** Reduced integration time by 60% through standardized protocols like MCP
 
 ---
 
