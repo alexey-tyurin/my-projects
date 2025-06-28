@@ -57,7 +57,7 @@ Deployment: Docker, Cloud Build, Infrastructure as Code
 ![Architecture](screenshots/a2a_arch.png)
 
 
-*Screenshots are available in my article - shows agent interaction flows, cloud deployment dashboard, 
+*Screenshots are available in my article - show agent interaction flows, cloud deployment dashboard, 
 local and cloud run and tests results:*
 https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-google-a2a-protocol/
 
@@ -102,7 +102,7 @@ Deployment: API integration, cost optimization
 ![Fine-tuning Accuracy Improvement](screenshots/SFT_evals_final.png)
 
 *Screenshots are available in repository and my Medium article
-https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-outperforming-gpt-4-1-at-a-fraction-of-the-cost-1f56e72e9ce0 - shows performance comparisons, cost analysis, and fine-tuning results*
+https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-outperforming-gpt-4-1-at-a-fraction-of-the-cost-1f56e72e9ce0 - show performance comparisons, cost analysis, and fine-tuning results*
 
 ---
 
@@ -141,7 +141,7 @@ Testing: Automated test suites, integration testing
 
 #### 📸 Screenshots
 ![SSE Transport Architecture](screenshots/mcp-SSE-arch.png)
-*Screenshots are available in repository and my Medium article in Google Cloud - Community https://medium.com/google-cloud/building-a-production-ready-ai-content-moderation-system-with-google-adk-and-model-context-protocol-8a3cf4a798f9 - shows SSE and STDIO implementations, testing results, and deployment architectures*
+*Screenshots are available in repository and my Medium article in Google Cloud - Community https://medium.com/google-cloud/building-a-production-ready-ai-content-moderation-system-with-google-adk-and-model-context-protocol-8a3cf4a798f9 - show SSE and STDIO implementations, testing results, and deployment architectures*
 
 
 ---
@@ -181,7 +181,7 @@ APIs: RESTful APIs, rate limiting, error handling
 
 #### 📸 Screenshots
 ![Final results with updated intent](screenshots/ai-agent-5.png)
-*Screenshots are available in repository - shows research paper analysis, ranking results, and agent workflow visualizations*
+*Screenshots are available in repository - show research paper analysis, ranking results, and agent workflow visualizations*
 
 ---
 
@@ -221,7 +221,7 @@ Visualization: matplotlib, seaborn, plotly
 #### 📸 Screenshots
 ![Mean Recall for XGBoost for diabetic dataset](screenshots/imbalanced_datasets-xgboost.png)
 
-*Screenshots are available in Jupyter Notebook imbalanced_datasets_notebook.ipynb in repository - shows performance comparisons, sampling technique visualizations, and evaluation metrics*
+*Screenshots are available in Jupyter Notebook imbalanced_datasets_notebook.ipynb in repository - show performance comparisons, sampling technique visualizations, and evaluation metrics*
 
 ---
 
