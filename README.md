@@ -80,7 +80,8 @@ A comprehensive project demonstrating how to fine-tune GPT-4o-mini models for ho
 - **Superior Performance:** 60% accuracy on ambiguous queries vs 52% for GPT-4.1
 - **Cost Efficiency:** Significant cost reduction through optimized model size and inference speed
 - **Comprehensive Evaluation:** Detailed performance comparison across multiple model variants
-- **HuggingFace Integration:** Published datasets for community use and research
+- **Synthetic Data Generation:** Using LLM generated datasets with comprehensive set of hospitality intents   
+- **HuggingFace Integration:** Created and published datasets for community use and research
 
 #### 🛠️ Technologies Overview
 - **AI Models:** GPT-4o-mini, GPT-4.1, GPT-3.5-turbo (comparative analysis)
@@ -240,7 +241,7 @@ Visualization: matplotlib, seaborn, plotly
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
 - **Production Deployment:** Delivered cloud-native solutions with comprehensive CI/CD and monitoring
-- **Open Source Contribution:** Published datasets and frameworks for community benefit
+- **Open Source Contribution:** Created and published datasets and POCs for GenAI community benefit
 
 ## 📈 Impact Metrics
 
