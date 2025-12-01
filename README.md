@@ -1,19 +1,21 @@
-# Alexey Tyurin - GenAI Engineer Portfolio
+# Alexey Tyurin – Senior Software Engineer | Applied GenAI & AI Agents
 
 ## 👨‍💻 About Me
 
 **LinkedIn:** [https://www.linkedin.com/in/alexey-tyurin-36893287/](https://www.linkedin.com/in/alexey-tyurin-36893287/)
 
-I am a GenAI engineer specializing in optimization, autonomy, and security of Agentic AI solutions. With deep expertise in machine learning, AI agent development, and production-ready AI systems, I focus on building scalable, secure, and cost-effective AI solutions that deliver real business value.
+I am an experienced, hands-on Senior Software Engineer with 15+ years of expertise in building scalable backend and full-stack systems for large enterprises and startups.
+
+My focus is on Applied GenAI: bridging the gap between traditional software architecture and cutting-edge AI technologies. I am passionate about solving real business problems by designing secure, autonomous, and cost-effective AI solutions. Whether optimizing production workflows or orchestrating multi-agent systems, I leverage my deep engineering background to deliver robust AI capabilities that serve millions of users.
 
 ### 🚀 Skills and Interests
 
 - **AI/ML Technologies:** Agentic AI, Large Language Models (LLMs), Small Language Models (SLMs), Fine-tuning, Multi-agent Systems
-- **AI Frameworks:** LangGraph, LangChain, OpenAI GPT, Google ADK, Google A2A Protocol, Model Context Protocol (MCP)
-- **Specialized Areas:** Content Moderation, Prompt Security, AI Agent Orchestration, Imbalanced Dataset Handling
-- **Cloud Platforms:** Google Cloud Platform (Vertex AI), Cloud Run, Docker, Kubernetes
-- **Programming:** Python, Java, JavaScript, SQL
-- **Research Focus:** Autonomous AI systems, AI safety, production optimization, cost-effective AI deployment
+- **AI Frameworks:** LangGraph, LangChain, LangSmith, OpenAI GPT, Google ADK, Google A2A Protocol, Model Context Protocol (MCP)
+- **Specialized Areas:** System Architecture & Integration, Context Engineering, AI Agent Orchestration, Content Moderation, Prompt Security 
+- **Cloud Platforms:** Google Cloud Platform (Vertex AI), AWS (SageMaker), Microsoft Azure (Azure AI), Docker, Kubernetes
+- **Programming:** Java, Python, JavaScript, TypeScript, React, SQL
+- **Research Focus:** Solving business problems with AI, autonomous AI systems, AI safety, production optimization, cost-effective AI deployment
 
 ---
 
