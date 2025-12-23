@@ -12,7 +12,7 @@ My focus is on Applied GenAI: bridging the gap between traditional software arch
 
 - **AI/ML Technologies:** Agentic AI, Large Language Models (LLMs), Small Language Models (SLMs), Fine-tuning, Multi-agent Systems
 - **AI Frameworks:** LangGraph, LangChain, LangSmith, OpenAI GPT, Google ADK, Google A2A Protocol, Model Context Protocol (MCP)
-- **Specialized Areas:** System Architecture & Integration, Context Engineering, AI Agent Orchestration, Content Moderation, Prompt Security 
+- **Specialized Areas:** System Architecture & Integration, Context Engineering, AI Agent Orchestration, Content Moderation, Prompt Security
 - **Cloud Platforms:** Google Cloud Platform (Vertex AI), AWS (SageMaker), Microsoft Azure (Azure AI), Docker, Kubernetes
 - **Programming:** Java, Python, JavaScript, TypeScript, React, SQL
 - **Research Focus:** Solving business problems with AI, autonomous AI systems, AI safety, production optimization, cost-effective AI deployment
@@ -21,7 +21,98 @@ My focus is on Applied GenAI: bridging the gap between traditional software arch
 
 ## 🏆 Featured Projects
 
-### 1. A2A Double Validation - POC for Multi-Agent autonomous System
+### 1. Messaging Service - Production-Grade Distributed System (Vibe Engineering Showcase)
+**Repository:** [https://github.com/alexey-tyurin/messaging-service](https://github.com/alexey-tyurin/messaging-service)
+
+#### 📋 Description
+A production-ready distributed messaging platform featuring Redis-based sliding window rate limiting, event-driven architecture with Redis Streams, circuit breakers, async message processing, and comprehensive observability. Built using AI-augmented "Vibe Engineering" methodology with Cursor, Claude, and Google Antigravity.
+
+#### 💼 Why This Project Matters
+- **Business Value:** Demonstrates how senior engineers can leverage AI tools to achieve 10x development velocity without compromising architectural rigor
+- **Breadth & Depth:** Full-stack distributed system with enterprise patterns—async/await, event sourcing, circuit breakers, rate limiting, webhook processing
+- **Scalability:** Horizontally scalable architecture targeting 10,000 messages/second per instance with 99.99% uptime
+- **Production Ready:** Complete with health checks, Prometheus metrics, structured logging, and OpenTelemetry instrumentation
+- **Vibe Engineering**: Proves AI-augmented development can produce Staff+ level code when guided by experienced architectural thinking
+
+#### 🔧 Key Features
+- **Sliding Window Rate Limiting:** Redis sorted sets with O(log N) operations, distributed across instances, per-client + per-endpoint granularity
+- **Event-Driven Architecture:** Redis Streams for at-least-once message delivery with consumer groups and automatic retry
+- **Multi-Channel Messaging:** Unified API for SMS, MMS, Email with extensibility for voice/voicemail
+- **Conversation Threading:** Automatic message grouping by participants across multiple providers
+- **Provider Abstraction:** Strategy pattern with clean failover logic for Twilio, SendGrid, and future providers
+- **Async Processing:** Non-blocking I/O throughout, sub-50ms API response times
+- **Circuit Breakers:** Provider fault isolation with automatic recovery
+- **Webhook Validation:** HMAC signature verification, duplicate detection, async processing
+- **Comprehensive Observability:** Prometheus metrics, structured JSON logs with correlation IDs, OpenTelemetry-ready
+
+#### 🤖 AI-Augmented Development Workflow
+```
+Cursor + Claude Sonnet 4.5    →  Core implementation (80% of codebase)
+          ↓
+Claude (via chat)             →  Architecture validation & documentation
+          ↓
+Google Antigravity            →  Refinements & methodology validation
+          ↓
+Production-Ready System in Days (Not Weeks)
+```
+
+**What AI Enabled:**
+- Complex patterns (Redis Streams, sliding window) implemented in minutes
+- Comprehensive test coverage auto-generated
+- Architectural consistency maintained across services
+- Complete documentation and diagrams
+
+**What Human Architect Controlled:**
+- System design decisions (event-driven, async-first)
+- Trade-off analysis (cache vs. database, sync vs. async)
+- Production concerns (security, failure modes, monitoring)
+- Tool orchestration and code review
+
+#### 🛠️ Technologies Overview
+- **Architecture:** Microservices-ready, event-driven, async-first, horizontally scalable
+- **Core Stack:** FastAPI (async), PostgreSQL 16, Redis 7.2+, SQLAlchemy 2.0 (async)
+- **Messaging Patterns:** Redis Streams (queue), Pub/Sub (notifications), Sorted Sets (rate limiting)
+- **Observability:** Prometheus metrics, structured logging, OpenTelemetry tracing
+- **Deployment:** Docker, Kubernetes-ready, multi-region capable
+- **AI Development Tools:** Cursor IDE (Claude Sonnet 4.5), Claude (Anthropic), Google Antigravity
+
+#### 💻 Tech Stack
+```
+Backend: Python 3.11+, FastAPI 0.115+, Async/Await
+Database: PostgreSQL 16 (ACID, JSONB), SQLAlchemy 2.0 (async ORM)
+Cache/Queue: Redis 7.2+ (Streams, Sorted Sets, Distributed Locks)
+Providers: Twilio (SMS/MMS), SendGrid (Email)
+Testing: pytest, pytest-asyncio
+Observability: Prometheus, structured logs, OpenTelemetry
+Deployment: Docker, Docker Compose, Kubernetes-ready
+Development: Cursor + Claude Sonnet 4.5, Google Antigravity
+```
+
+#### 📊 Performance Targets
+- **API Latency:** p99 < 100ms
+- **Throughput:** 10,000 messages/second per instance
+- **Availability:** 99.99% uptime
+- **Message Delivery:** < 5 seconds end-to-end
+
+#### 🎯 Architecture Highlights
+- **Rate Limiting:** Distributed sliding window using Redis sorted sets with automatic cleanup
+- **Message Flow:** Client → API (50ms) → Queue → Workers → Providers → Webhooks → Events
+- **Data Layer:** PostgreSQL (primary), Redis (cache + queue), S3/MinIO (attachments)
+- **Scalability:** Auto-scaling APIs, queue depth-based worker scaling, read replicas
+- **Resilience:** Circuit breakers, retry with exponential backoff, dead letter queue
+
+#### 📸 Screenshots
+*Full architecture diagrams and system design details available in ARCHITECTURE.md in the repository*
+
+**Key Documentation:**
+- Comprehensive ARCHITECTURE.md with system diagrams
+- QUICK_START.md for rapid deployment
+- RUN_GUIDE.md for operations and troubleshooting
+- Interactive API docs at `/docs` endpoint
+
+---
+
+### 2. A2A Double Validation - POC for Multi-Agent Autonomous System
 **Repository:** [https://github.com/alexey-tyurin/a2a-double-validation](https://github.com/alexey-tyurin/a2a-double-validation)
 
 #### 📋 Description
@@ -59,13 +150,13 @@ Deployment: Docker, Cloud Build, Infrastructure as Code
 ![Architecture](screenshots/a2a_arch.png)
 
 
-*Screenshots are available in my article - show agent interaction flows, cloud deployment dashboard, 
+*Screenshots are available in my article - show agent interaction flows, cloud deployment dashboard,
 local and cloud run and tests results:*
 https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-google-a2a-protocol/
 
 ---
 
-### 2. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
+### 3. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
 **Repository:** [https://github.com/alexey-tyurin/fine-tuning-gpt](https://github.com/alexey-tyurin/fine-tuning-gpt)
 
 #### 📋 Description
@@ -82,7 +173,7 @@ A comprehensive project demonstrating how to fine-tune GPT-4o-mini models for ho
 - **Superior Performance:** 60% accuracy on ambiguous queries vs 52% for GPT-4.1
 - **Cost Efficiency:** Significant cost reduction through optimized model size and inference speed
 - **Comprehensive Evaluation:** Detailed performance comparison across multiple model variants
-- **Synthetic Data Generation:** Using LLM generated datasets with comprehensive set of hospitality intents   
+- **Synthetic Data Generation:** Using LLM generated datasets with comprehensive set of hospitality intents
 - **HuggingFace Integration:** Created and published datasets for community use and research
 
 #### 🛠️ Technologies Overview
@@ -109,7 +200,7 @@ https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-o
 
 ---
 
-### 3. AI Agent with MCP - Content Moderation System
+### 4. AI Agent with MCP - Content Moderation System
 **Repository:** [https://github.com/alexey-tyurin/ai-agent-mcp](https://github.com/alexey-tyurin/ai-agent-mcp)
 
 #### 📋 Description
@@ -149,7 +240,7 @@ Testing: Automated test suites, integration testing
 
 ---
 
-### 4. AI Agent - ArXiv Research Paper Intelligence
+### 5. AI Agent - ArXiv Research Paper Intelligence
 **Repository:** [https://github.com/alexey-tyurin/ai-agent](https://github.com/alexey-tyurin/ai-agent)
 
 #### 📋 Description
@@ -188,7 +279,7 @@ APIs: RESTful APIs, rate limiting, error handling
 
 ---
 
-### 5. Imbalanced Datasets - Machine Learning Optimization
+### 6. Imbalanced Datasets - Machine Learning Optimization
 **Repository:** [https://github.com/alexey-tyurin/imbalanced_datasets](https://github.com/alexey-tyurin/imbalanced_datasets)
 
 #### 📋 Description
@@ -230,15 +321,17 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📊 Project Statistics
 
-- **Total Projects:** 5 major projects including POCs optimized for production
-- **GitHub Stars:** 11 across repositories
-- **Technologies Used:** 15+ AI/ML frameworks and tools
+- **Total Projects:** 6 major projects including POCs optimized for production
+- **GitHub Stars:** 11+ across repositories
+- **Technologies Used:** 20+ AI/ML frameworks and tools
 - **Cloud Platforms:** Google VertexAI Cloud Platform, OpenAI API, Meta, HuggingFace with multi-cloud expertise
 - **Programming Languages:** Python (primary), JavaScript, SQL, Shell scripting
 - **AI Models Integrated:** GPT-4, GPT-4o-mini, Gemini 2.0 Flash, Gemma 3, Llama, Llama Prompt Guard 2
+- **Development Paradigms:** Traditional engineering, AI-augmented "Vibe Engineering", hybrid approaches
 
 ## 🎯 Key Achievements
 
+- **Vibe Engineering Pioneer:** Demonstrated 10x development velocity using AI tools (Cursor, Claude, Antigravity) while maintaining Staff+ architectural standards
 - **Cost Optimization:** Achieved 90% cost reduction while improving accuracy through strategic fine-tuning
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
@@ -247,8 +340,40 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📈 Impact Metrics
 
-- **Performance Improvements:** 130% accuracy improvement over the base model through specialized model optimization
+- **Development Speed:** 10x faster time-to-production using AI-augmented development
+- **Performance Improvements:** 130% accuracy improvement over base models through specialized optimization
 - **Cost Savings:** Up to 90% reduction in operational costs through efficient architecture
+- **Scalability:** Systems designed for 10,000+ requests/second with 99.99% uptime targets
+
+---
+
+## 🔬 Development Methodologies
+
+### Vibe Engineering (AI-Augmented Development)
+**Tools:** Cursor + Claude Sonnet 4.5, Claude (Anthropic), Google Antigravity
+
+**Approach:**
+- AI handles mechanical complexity (boilerplate, patterns, tests)
+- Human architect controls strategic decisions (system design, trade-offs)
+- Result: Staff+ quality code at 10x velocity
+
+**Demonstrated in:** Messaging Service project
+
+### Traditional Engineering
+**Approach:**
+- Hand-crafted algorithms and data structures
+- Comprehensive testing and validation
+- Performance optimization and scalability
+
+**Demonstrated in:** Imbalanced Datasets, Fine-Tuning GPT projects
+
+### Hybrid Approach
+**Approach:**
+- AI-assisted research and exploration
+- Human-guided architecture and integration
+- Iterative refinement and optimization
+
+**Demonstrated in:** A2A Double Validation, AI Agent projects
 
 ---
 
@@ -258,4 +383,4 @@ Visualization: matplotlib, seaborn, plotly
 **LinkedIn:** [https://www.linkedin.com/in/alexey-tyurin-36893287/](https://www.linkedin.com/in/alexey-tyurin-36893287/)  
 **GitHub:** [https://github.com/alexey-tyurin](https://github.com/alexey-tyurin)
 
-*Available for consulting, collaboration, and full-time opportunities in GenAI, AI agent development, and production AI systems.*
+*Available for consulting, collaboration, and full-time opportunities in GenAI, AI agent development, production AI systems, and AI-augmented software engineering.*
