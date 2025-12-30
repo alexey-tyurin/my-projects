@@ -1,27 +1,113 @@
-# Alexey Tyurin – Senior Software Engineer | Applied GenAI & AI Agents
+# Alexey Tyurin – Staff Software Engineer | AI-Driven Platform Modernization
+
+## 📑 Table of Contents
+
+- [About Me](#-about-me)
+- [Featured Projects](#-featured-projects)
+  - [1. RMD Advisor - AI-Powered Retirement Distribution Assistant](#1-rmd-advisor---ai-powered-retirement-distribution-assistant-new)
+  - [2. Messaging Service - Production-Grade Distributed System](#2-messaging-service---production-grade-distributed-system-vibe-engineering-showcase)
+  - [3. A2A Double Validation - Multi-Agent Autonomous System](#3-a2a-double-validation---poc-for-multi-agent-autonomous-system)
+  - [4. Fine-Tuning GPT for Hospitality](#4-fine-tuning-gpt-for-hospitality---cost-effective-ai-optimization)
+  - [5. AI Agent with MCP - Content Moderation System](#5-ai-agent-with-mcp---content-moderation-system)
+  - [6. AI Agent - ArXiv Research Paper Intelligence](#6-ai-agent---arxiv-research-paper-intelligence)
+  - [7. Imbalanced Datasets - Machine Learning Optimization](#7-imbalanced-datasets---machine-learning-optimization)
+- [Project Statistics](#-project-statistics)
+- [Key Achievements](#-key-achievements)
+- [Impact Metrics](#-impact-metrics)
+- [Development Methodologies](#-development-methodologies)
+- [Publications](#-publications)
+- [Contact Information](#-contact-information)
+
+---
 
 ## 👨‍💻 About Me
 
 **LinkedIn:** [https://www.linkedin.com/in/alexey-tyurin-36893287/](https://www.linkedin.com/in/alexey-tyurin-36893287/)
 
-I am an experienced, hands-on Senior Software Engineer with 15+ years of expertise in building scalable backend and full-stack systems for large enterprises and startups.
+**Staff Software Engineer** specializing in **AI-driven Platform Modernization and Legacy Transformation** with 15+ years of backend/full-stack expertise across large enterprises (PayPal) and fast-moving startups. Proven track record architecting scalable distributed systems serving millions of users.
 
-My focus is on Applied GenAI: bridging the gap between traditional software architecture and cutting-edge AI technologies. I am passionate about solving real business problems by designing secure, autonomous, and cost-effective AI solutions. Whether optimizing production workflows or orchestrating multi-agent systems, I leverage my deep engineering background to deliver robust AI capabilities that serve millions of users.
+Expert in modernizing legacy applications using **RAG architectures, AI agent orchestration (MCP, A2A, LangGraph)**, and LLM integration. Practitioner of Vibe Engineering (AI-augmented development) and Context Engineering for production GenAI solutions. **Published author** on AI agent development and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
+
+Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. Passionate about applying GenAI within software systems to solve real business problems, accelerate developer productivity, and enhance customer and platform capabilities.
 
 ### 🚀 Skills and Interests
 
-- **AI/ML Technologies:** Agentic AI, Large Language Models (LLMs), Small Language Models (SLMs), Fine-tuning, Multi-agent Systems
-- **AI Frameworks:** LangGraph, LangChain, LangSmith, OpenAI GPT, Google ADK, Google A2A Protocol, Model Context Protocol (MCP)
-- **Specialized Areas:** System Architecture & Integration, Context Engineering, AI Agent Orchestration, Content Moderation, Prompt Security
-- **Cloud Platforms:** Google Cloud Platform (Vertex AI), AWS (SageMaker), Microsoft Azure (Azure AI), Docker, Kubernetes
-- **Programming:** Java, Python, JavaScript, TypeScript, React, SQL
+- **AI/ML & GenAI:** RAG Architectures, LangGraph, LangChain, MCP, Google A2A/ADK, GPT-4/5, Claude, Gemini, Llama, Prompt Engineering, Fine-Tuning, AI Agent Orchestration, Vector Databases, LLM Security
+- **Platform Modernization:** Legacy System Transformation, Multi-Tenancy & Distributed Systems, Domain-Driven Design, Event-Driven & Microservices Architecture
+- **Cloud & Infrastructure:** Google Cloud (Vertex AI), AWS (SageMaker, EC2, RDS), Azure AI, Docker, Kubernetes, Terraform
+- **Programming:** Java (Spring, Hibernate), Python (AI/ML, FastAPI, async), JavaScript/TypeScript, React, SQL, GraphQL
+- **Data & Events:** Kafka, Redis (Streams, Pub/Sub), PostgreSQL, Oracle, MongoDB, CQRS patterns
+- **Practices:** Performance Engineering & Caching, CI/CD, OpenTelemetry, Agile/Scrum, Technical Writing
 - **Research Focus:** Solving business problems with AI, autonomous AI systems, AI safety, production optimization, cost-effective AI deployment
 
 ---
 
 ## 🏆 Featured Projects
 
-### 1. Messaging Service - Production-Grade Distributed System (Vibe Engineering Showcase)
+### 1. RMD Advisor - AI-Powered Retirement Distribution Assistant 🆕
+**Repository:** [https://github.com/alexey-tyurin/rmd-advisor](https://github.com/alexey-tyurin/rmd-advisor)
+
+**Article:** [Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)
+
+#### 📋 Description
+A production-ready RAG (Retrieval-Augmented Generation) system for wealth management that demonstrates **AI-driven legacy modernization**. The project integrates a Python AI layer with a Java Spring Boot calculation engine, showcasing how to add intelligence to existing enterprise systems without rip-and-replace.
+
+#### 💼 Why This Project Matters
+- **Business Value:** Demonstrates \$800K+ potential annual savings through AI-powered customer self-service in financial services
+- **AI + Legacy Integration:** Wraps proven Java calculation engines with modern RAG architecture—the pattern enterprises need
+- **Domain Expertise:** Built with deep understanding of retirement services (SECURE Act 2.0, inherited IRAs, QCDs, IRS life expectancy tables)
+- **Production Ready:** Complete with Docker deployment, comprehensive API testing, and observability
+- **Regulatory Compliance:** Grounded in authoritative IRS sources (Publication 590-B) for trustworthy responses
+
+#### 🔧 Key Features
+- **RAG Knowledge Base:** 2,200+ chunks from IRS Publication 590-B, SECURE Act 2.0 provisions, inherited IRA rules, and QCD guidelines
+- **Intelligent Q&A:** Natural language interface answering complex retirement distribution questions
+- **Precise Calculations:** Java Spring Boot service implementing IRS Uniform Lifetime Table III with exact values
+- **Multi-Service Architecture:** Python RAG API + Java Calculator + Gradio Chat UI with clean API boundaries
+- **LangChain LCEL:** Modern composable chains replacing deprecated RetrievalQA patterns
+- **Multiple LLM Support:** Google Gemini (primary), OpenAI (fallback) with cost optimization
+- **Local Embeddings:** Privacy-compliant sentence-transformers (no data sent to external APIs)
+
+#### 🏗️ Architecture
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Gradio UI     │────▶│  Python RAG     │────▶│  Java Service   │
+│   (Port 7860)   │     │  (Port 8000)    │     │  (Port 8080)    │
+│                 │     │  - Gemini LLM   │     │  - IRS Tables   │
+│  Self-Service   │     │  - ChromaDB     │     │  - Calculations │
+│  Chat Interface │     │  - LCEL Chain   │     │  - Tax Logic    │
+└─────────────────┘     └────────┬────────┘     └─────────────────┘
+                                 │
+                                 ▼
+                        ┌─────────────────┐
+                        │   ChromaDB      │
+                        │ (Vector Store)  │
+                        │  2,200+ chunks  │
+                        └─────────────────┘
+```
+
+#### 💻 Tech Stack
+```
+AI/ML: LangChain 0.2+ (LCEL), ChromaDB, Google Gemini, sentence-transformers
+Backend: Python 3.11+, FastAPI (async), Java 17+, Spring Boot 3.2
+Database: ChromaDB (vectors), PostgreSQL-ready
+Deployment: Docker, Docker Compose, Shell scripts
+Testing: pytest, curl-based API testing
+```
+
+#### 📊 Business Impact
+- **ROI Potential:** \$832K annual savings (50% call deflection × 100K inquiries × 20 min × \$50/hr)
+- **24/7 Availability:** Instant answers during critical year-end RMD deadline period
+- **Compliance:** Consistent, accurate guidance grounded in IRS regulations
+- **Scalability:** Handles 10x volume with same infrastructure
+
+#### 📸 Screenshots
+![RMD Advisor Chat Interface](screenshots/rmd-advisor-chat.png)
+*Screenshots available in repository and Medium article showing chat interface, RMD calculations, and complex inherited IRA scenarios*
+
+---
+
+### 2. Messaging Service - Production-Grade Distributed System (Vibe Engineering Showcase)
 **Repository:** [https://github.com/alexey-tyurin/messaging-service](https://github.com/alexey-tyurin/messaging-service)
 
 #### 📋 Description
@@ -112,7 +198,7 @@ Development: Cursor + Claude Sonnet 4.5, Google Antigravity
 
 ---
 
-### 2. A2A Double Validation - POC for Multi-Agent Autonomous System
+### 3. A2A Double Validation - POC for Multi-Agent Autonomous System
 **Repository:** [https://github.com/alexey-tyurin/a2a-double-validation](https://github.com/alexey-tyurin/a2a-double-validation)
 
 #### 📋 Description
@@ -156,7 +242,7 @@ https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-goo
 
 ---
 
-### 3. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
+### 4. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
 **Repository:** [https://github.com/alexey-tyurin/fine-tuning-gpt](https://github.com/alexey-tyurin/fine-tuning-gpt)
 
 #### 📋 Description
@@ -200,7 +286,7 @@ https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-o
 
 ---
 
-### 4. AI Agent with MCP - Content Moderation System
+### 5. AI Agent with MCP - Content Moderation System
 **Repository:** [https://github.com/alexey-tyurin/ai-agent-mcp](https://github.com/alexey-tyurin/ai-agent-mcp)
 
 #### 📋 Description
@@ -240,7 +326,7 @@ Testing: Automated test suites, integration testing
 
 ---
 
-### 5. AI Agent - ArXiv Research Paper Intelligence
+### 6. AI Agent - ArXiv Research Paper Intelligence
 **Repository:** [https://github.com/alexey-tyurin/ai-agent](https://github.com/alexey-tyurin/ai-agent)
 
 #### 📋 Description
@@ -279,7 +365,7 @@ APIs: RESTful APIs, rate limiting, error handling
 
 ---
 
-### 6. Imbalanced Datasets - Machine Learning Optimization
+### 7. Imbalanced Datasets - Machine Learning Optimization
 **Repository:** [https://github.com/alexey-tyurin/imbalanced_datasets](https://github.com/alexey-tyurin/imbalanced_datasets)
 
 #### 📋 Description
@@ -321,25 +407,28 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📊 Project Statistics
 
-- **Total Projects:** 6 major projects including POCs optimized for production
+- **Total Projects:** 7 major projects including POCs optimized for production
 - **GitHub Stars:** 11+ across repositories
-- **Technologies Used:** 20+ AI/ML frameworks and tools
-- **Cloud Platforms:** Google VertexAI Cloud Platform, OpenAI API, Meta, HuggingFace with multi-cloud expertise
-- **Programming Languages:** Python (primary), JavaScript, SQL, Shell scripting
-- **AI Models Integrated:** GPT-4, GPT-4o-mini, Gemini 2.0 Flash, Gemma 3, Llama, Llama Prompt Guard 2
+- **Technologies Used:** 25+ AI/ML frameworks and tools
+- **Cloud Platforms:** Google Cloud (Vertex AI), AWS, Azure with multi-cloud expertise
+- **Programming Languages:** Python (primary), Java, JavaScript/TypeScript, SQL
+- **AI Models Integrated:** GPT-4/5, Gemini 2.0 Flash, Gemma 3, Claude, Llama, Llama Prompt Guard 2
 - **Development Paradigms:** Traditional engineering, AI-augmented "Vibe Engineering", hybrid approaches
 
 ## 🎯 Key Achievements
 
+- **AI-Driven Platform Modernization:** Built RMD Advisor demonstrating \$800K+ ROI potential through RAG + legacy Java integration
 - **Vibe Engineering Pioneer:** Demonstrated 10x development velocity using AI tools (Cursor, Claude, Antigravity) while maintaining Staff+ architectural standards
 - **Cost Optimization:** Achieved 90% cost reduction while improving accuracy through strategic fine-tuning
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
 - **Production Deployment:** Delivered cloud-native solutions with comprehensive CI/CD and monitoring
+- **Thought Leadership:** Published 4 articles on AI agent development, RAG architecture, and LLM optimization
 - **Open Source Contribution:** Created and published datasets and POCs for GenAI community benefit
 
 ## 📈 Impact Metrics
 
+- **Business ROI:** \$800K+ potential annual savings demonstrated in wealth management AI project
 - **Development Speed:** 10x faster time-to-production using AI-augmented development
 - **Performance Improvements:** 130% accuracy improvement over base models through specialized optimization
 - **Cost Savings:** Up to 90% reduction in operational costs through efficient architecture
@@ -357,7 +446,7 @@ Visualization: matplotlib, seaborn, plotly
 - Human architect controls strategic decisions (system design, trade-offs)
 - Result: Staff+ quality code at 10x velocity
 
-**Demonstrated in:** Messaging Service project
+**Demonstrated in:** Messaging Service, RMD Advisor projects
 
 ### Traditional Engineering
 **Approach:**
@@ -377,10 +466,21 @@ Visualization: matplotlib, seaborn, plotly
 
 ---
 
+## 📝 Publications
+
+Published articles on Medium and AI Accelerator Institute:
+
+- **[Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)**
+- **[How to build autonomous AI agent with Google A2A protocol](https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-google-a2a-protocol/)**
+- **[Fine-tuning GPT-4o-mini for Hospitality Chatbots: Outperforming GPT-4.1 at a Fraction of the Cost](https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-outperforming-gpt-4-1-at-a-fraction-of-the-cost-1f56e72e9ce0)**
+- **[Building a Production-Ready AI Content Moderation System with Google ADK and MCP](https://medium.com/google-cloud/building-a-production-ready-ai-content-moderation-system-with-google-adk-and-model-context-protocol-8a3cf4a798f9)**
+
+---
+
 ## 📞 Contact Information
 
 **Email:** altyurin3@gmail.com  
 **LinkedIn:** [https://www.linkedin.com/in/alexey-tyurin-36893287/](https://www.linkedin.com/in/alexey-tyurin-36893287/)  
 **GitHub:** [https://github.com/alexey-tyurin](https://github.com/alexey-tyurin)
 
-*Available for consulting, collaboration, and full-time opportunities in GenAI, AI agent development, production AI systems, and AI-augmented software engineering.*
+*Available for consulting, collaboration, and full-time opportunities in AI-driven platform modernization, RAG architectures, AI agent development, and enterprise AI integration.*
