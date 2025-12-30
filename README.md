@@ -28,7 +28,9 @@
 
 Expert in modernizing legacy applications using **RAG architectures, AI agent orchestration (MCP, A2A, LangGraph)**, and LLM integration. Practitioner of Vibe Engineering (AI-augmented development) and Context Engineering for production GenAI solutions. **Published author** on AI agent development and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
 
-Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. Passionate about applying GenAI within software systems to solve real business problems, accelerate developer productivity, and enhance customer and platform capabilities.
+> **💡 I build AI solutions that solve real business problems with quantified ROI—not demos or tutorials.**
+
+Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. Every project in this portfolio addresses a genuine business challenge with measurable impact.
 
 ### 🚀 Skills and Interests
 
@@ -42,7 +44,9 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 
 ---
 
-## 🏆 Featured Projects
+## 🏆 Featured Projects — Real Business Solutions
+
+> **Every project below solves a genuine business problem with quantified ROI.** These are not tutorials or demos—they are production-ready solutions addressing real challenges in financial services, content moderation, enterprise AI deployment, and distributed systems.
 
 ### 1. RMD Advisor - AI-Powered Retirement Distribution Assistant 🆕
 **Repository:** [https://github.com/alexey-tyurin/rmd-advisor](https://github.com/alexey-tyurin/rmd-advisor)
@@ -52,8 +56,11 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 #### 📋 Description
 A production-ready RAG (Retrieval-Augmented Generation) system for wealth management that demonstrates **AI-driven legacy modernization**. The project integrates a Python AI layer with a Java Spring Boot calculation engine, showcasing how to add intelligence to existing enterprise systems without rip-and-replace.
 
+#### 🎯 The Business Problem
+Every December, financial advisors face a tsunami of RMD (Required Minimum Distribution) inquiries. Customers confused by SECURE Act 2.0 changes, inherited IRA rules, and complex tax implications overwhelm support lines—while facing a **25% IRS penalty** for mistakes. Traditional solutions (hiring more advisors, static FAQs) don't scale.
+
 #### 💼 Why This Project Matters
-- **Business Value:** Demonstrates \$800K+ potential annual savings through AI-powered customer self-service in financial services
+- **Business Value:** Demonstrates **\$800K+ potential annual savings** through AI-powered customer self-service in financial services
 - **AI + Legacy Integration:** Wraps proven Java calculation engines with modern RAG architecture—the pattern enterprises need
 - **Domain Expertise:** Built with deep understanding of retirement services (SECURE Act 2.0, inherited IRAs, QCDs, IRS life expectancy tables)
 - **Production Ready:** Complete with Docker deployment, comprehensive API testing, and observability
@@ -113,10 +120,13 @@ Testing: pytest, curl-based API testing
 #### 📋 Description
 A production-ready distributed messaging platform featuring Redis-based sliding window rate limiting, event-driven architecture with Redis Streams, circuit breakers, async message processing, and comprehensive observability. Built using AI-augmented "Vibe Engineering" methodology with Cursor, Claude, and Google Antigravity.
 
+#### 🎯 The Business Problem
+Modern applications need reliable multi-channel messaging (SMS, Email, MMS) with enterprise-grade features: rate limiting to prevent abuse, circuit breakers for fault tolerance, and sub-50ms response times. Building this from scratch typically takes months and requires deep distributed systems expertise.
+
 #### 💼 Why This Project Matters
-- **Business Value:** Demonstrates how senior engineers can leverage AI tools to achieve 10x development velocity without compromising architectural rigor
+- **Business Value:** Demonstrates how senior engineers can leverage AI tools to achieve **10x development velocity** without compromising architectural rigor
 - **Breadth & Depth:** Full-stack distributed system with enterprise patterns—async/await, event sourcing, circuit breakers, rate limiting, webhook processing
-- **Scalability:** Horizontally scalable architecture targeting 10,000 messages/second per instance with 99.99% uptime
+- **Scalability:** Horizontally scalable architecture targeting **10,000 messages/second** per instance with 99.99% uptime
 - **Production Ready:** Complete with health checks, Prometheus metrics, structured logging, and OpenTelemetry instrumentation
 - **Vibe Engineering**: Proves AI-augmented development can produce Staff+ level code when guided by experienced architectural thinking
 
@@ -204,8 +214,11 @@ Development: Cursor + Claude Sonnet 4.5, Google Antigravity
 #### 📋 Description
 A sophisticated multi-agent system for query processing with comprehensive safety verification and critique, built using Google's A2A protocol, Google ADK, Llama Prompt Guard 2, Gemma 3, and Gemini 2.0 Flash.
 
+#### 🎯 The Business Problem
+Enterprises want to deploy AI agents in production, but **safety concerns block adoption**. How do you let AI agents operate autonomously without constant human supervision while preventing prompt injection attacks and ensuring output quality? This is the #1 barrier to enterprise AI agent deployment.
+
 #### 💼 Why This Project Matters
-- **Business Value:** Enables autonomous AI agents to operate safely in production without constant human supervision, reducing operational costs while maintaining security standards
+- **Business Value:** Enables autonomous AI agents to operate safely in production **without constant human supervision**, reducing operational costs while maintaining security standards
 - **Breadth & Depth:** Integrates multiple cutting-edge AI technologies (A2A protocol, ADK, multiple LLMs) in a cohesive system architecture
 - **Scalability:** Designed for cloud deployment with Google Cloud Run, supporting enterprise-scale operations
 - **Production Ready:** Includes comprehensive deployment scripts, monitoring, and security features for real-world use
@@ -248,8 +261,11 @@ https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-goo
 #### 📋 Description
 A comprehensive project demonstrating how to fine-tune GPT-4o-mini models for hospitality chatbot intent classification, achieving higher accuracy than GPT-4.1 while significantly reducing costs and improving response times.
 
+#### 🎯 The Business Problem
+Enterprises want to use LLMs for customer-facing chatbots, but **GPT-4 costs are prohibitive at scale**. Running thousands of intent classification queries per day quickly becomes expensive. How do you get GPT-4 quality at GPT-4o-mini prices?
+
 #### 💼 Why This Project Matters
-- **Business Value:** Achieved 60% accuracy vs GPT-4.1's 52% while reducing operational costs by up to 90% through smaller, specialized models
+- **Business Value:** Achieved **60% accuracy vs GPT-4.1's 52%** while reducing operational costs by up to **90%** through smaller, specialized models
 - **Breadth & Depth:** Covers complete ML pipeline from dataset creation to production deployment with real-world performance metrics
 - **Scalability:** Demonstrates how domain-specific fine-tuning scales better than general-purpose large models for specific use cases
 - **Production Ready:** Includes comprehensive evaluation metrics, deployment guides, and cost analysis for business decision-making
@@ -292,8 +308,11 @@ https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-o
 #### 📋 Description
 A production-ready content moderation system leveraging OpenAI's moderation API through Google's Agent Development Kit (ADK) and Model Context Protocol (MCP), providing seamless content safety for AI applications.
 
+#### 🎯 The Business Problem
+Every AI-powered platform needs content moderation to prevent harmful outputs, but **building and maintaining moderation systems is expensive**. You need to integrate multiple AI vendors, handle different transport protocols, and deploy across cloud/on-prem/edge environments. How do you get enterprise content safety without enterprise costs?
+
 #### 💼 Why This Project Matters
-- **Business Value:** Provides free, scalable content moderation using OpenAI's API, protecting platforms from harmful content while maintaining user experience
+- **Business Value:** Provides **free, scalable content moderation** using OpenAI's API, protecting platforms from harmful content while maintaining user experience
 - **Breadth & Depth:** Demonstrates cross-vendor AI integration (Google ADK + OpenAI + Llama) with dual transport protocols
 - **Scalability:** Supports both local development and cloud deployment with comprehensive scaling options
 - **Production Ready:** Complete deployment guides for cloud, on-premises, and hybrid environments
@@ -470,7 +489,7 @@ Visualization: matplotlib, seaborn, plotly
 
 Published articles on Medium and AI Accelerator Institute:
 
-- **[Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)**
+- **[Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)** (2024)
 - **[How to build autonomous AI agent with Google A2A protocol](https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-google-a2a-protocol/)**
 - **[Fine-tuning GPT-4o-mini for Hospitality Chatbots: Outperforming GPT-4.1 at a Fraction of the Cost](https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-outperforming-gpt-4-1-at-a-fraction-of-the-cost-1f56e72e9ce0)**
 - **[Building a Production-Ready AI Content Moderation System with Google ADK and MCP](https://medium.com/google-cloud/building-a-production-ready-ai-content-moderation-system-with-google-adk-and-model-context-protocol-8a3cf4a798f9)**
