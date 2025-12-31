@@ -1,4 +1,4 @@
-# Alexey Tyurin – Staff Software Engineer | AI-Driven Platform Modernization
+# Alexey Tyurin — Staff Software Engineer | AI-Driven Platform Modernization
 
 ## 📑 Table of Contents
 
@@ -24,13 +24,13 @@
 
 **LinkedIn:** [https://www.linkedin.com/in/alexey-tyurin-36893287/](https://www.linkedin.com/in/alexey-tyurin-36893287/)
 
-**Staff Software Engineer** specializing in **AI-driven Platform Modernization and Legacy Transformation** with 15+ years of backend/full-stack expertise across large enterprises (PayPal) and fast-moving startups. Proven track record architecting scalable distributed systems serving millions of users.
+**Staff Software Engineer** with **10 years of production experience at PayPal** serving millions of users, now specializing in **AI-driven Platform Modernization and Legacy Transformation**. 15+ years of backend/full-stack expertise across large enterprises and fast-moving startups.
 
 Expert in modernizing legacy applications using **RAG architectures, AI agent orchestration (MCP, A2A, LangGraph)**, and LLM integration. Practitioner of Vibe Engineering (AI-augmented development) and Context Engineering for production GenAI solutions. **Published author** on AI agent development and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
 
-> **💡 I build AI solutions that solve real business problems with quantified ROI—not demos or tutorials.**
+> **💡 I combine enterprise-scale production experience with deep GenAI architectural knowledge—backed by published articles and production-ready implementations.**
 
-Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. Every project in this portfolio addresses a genuine business challenge with measurable impact.
+Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. The projects in this portfolio demonstrate production-ready architectures addressing genuine business challenges, with published technical articles validating the approaches.
 
 ### 🚀 Skills and Interests
 
@@ -44,9 +44,9 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 
 ---
 
-## 🏆 Featured Projects — Real Business Solutions
+## 🏆 Featured Projects — Production-Ready Portfolio
 
-> **Every project below solves a genuine business problem with quantified ROI.** These are not tutorials or demos—they are production-ready solutions addressing real challenges in financial services, content moderation, enterprise AI deployment, and distributed systems.
+> **These projects demonstrate production-ready architectures addressing real business challenges.** Each project includes comprehensive documentation, deployment configurations, and published technical articles validating the architectural approaches. Built to showcase how AI capabilities can be integrated with enterprise systems.
 
 ### 1. RMD Advisor - AI-Powered Retirement Distribution Assistant 🆕
 **Repository:** [https://github.com/alexey-tyurin/rmd-advisor](https://github.com/alexey-tyurin/rmd-advisor)
@@ -60,7 +60,7 @@ A production-ready RAG (Retrieval-Augmented Generation) system for wealth manage
 Every December, financial advisors face a tsunami of RMD (Required Minimum Distribution) inquiries. Customers confused by SECURE Act 2.0 changes, inherited IRA rules, and complex tax implications overwhelm support lines—while facing a **25% IRS penalty** for mistakes. Traditional solutions (hiring more advisors, static FAQs) don't scale.
 
 #### 💼 Why This Project Matters
-- **Business Value:** Demonstrates **\$800K+ potential annual savings** through AI-powered customer self-service in financial services
+- **Business Value:** Models **\$800K+ potential annual savings** through AI-powered customer self-service in financial services (based on industry call deflection benchmarks)
 - **AI + Legacy Integration:** Wraps proven Java calculation engines with modern RAG architecture—the pattern enterprises need
 - **Domain Expertise:** Built with deep understanding of retirement services (SECURE Act 2.0, inherited IRAs, QCDs, IRS life expectancy tables)
 - **Production Ready:** Complete with Docker deployment, comprehensive API testing, and observability
@@ -102,11 +102,11 @@ Deployment: Docker, Docker Compose, Shell scripts
 Testing: pytest, curl-based API testing
 ```
 
-#### 📊 Business Impact
-- **ROI Potential:** \$832K annual savings (50% call deflection × 100K inquiries × 20 min × \$50/hr)
+#### 📊 Business Impact Potential
+- **ROI Model:** \$832K annual savings potential (50% call deflection × 100K inquiries × 20 min × \$50/hr)
 - **24/7 Availability:** Instant answers during critical year-end RMD deadline period
 - **Compliance:** Consistent, accurate guidance grounded in IRS regulations
-- **Scalability:** Handles 10x volume with same infrastructure
+- **Scalability:** Designed to handle 10x volume with same infrastructure
 
 #### 📸 Screenshots
 ![RMD Advisor Chat Interface](screenshots/rmd-advisor-chat.png)
@@ -128,7 +128,7 @@ Modern applications need reliable multi-channel messaging (SMS, Email, MMS) with
 - **Breadth & Depth:** Full-stack distributed system with enterprise patterns—async/await, event sourcing, circuit breakers, rate limiting, webhook processing
 - **Scalability:** Horizontally scalable architecture targeting **10,000 messages/second** per instance with 99.99% uptime
 - **Production Ready:** Complete with health checks, Prometheus metrics, structured logging, and OpenTelemetry instrumentation
-- **Vibe Engineering**: Proves AI-augmented development can produce Staff+ level code when guided by experienced architectural thinking
+- **Vibe Engineering**: Demonstrates AI-augmented development can produce Staff+ level code when guided by experienced architectural thinking
 
 #### 🔧 Key Features
 - **Sliding Window Rate Limiting:** Redis sorted sets with O(log N) operations, distributed across instances, per-client + per-endpoint granularity
@@ -218,10 +218,10 @@ A sophisticated multi-agent system for query processing with comprehensive safet
 Enterprises want to deploy AI agents in production, but **safety concerns block adoption**. How do you let AI agents operate autonomously without constant human supervision while preventing prompt injection attacks and ensuring output quality? This is the #1 barrier to enterprise AI agent deployment.
 
 #### 💼 Why This Project Matters
-- **Business Value:** Enables autonomous AI agents to operate safely in production **without constant human supervision**, reducing operational costs while maintaining security standards
+- **Business Value:** Demonstrates patterns for autonomous AI agents to operate safely in production **without constant human supervision**, addressing key enterprise adoption barriers
 - **Breadth & Depth:** Integrates multiple cutting-edge AI technologies (A2A protocol, ADK, multiple LLMs) in a cohesive system architecture
 - **Scalability:** Designed for cloud deployment with Google Cloud Run, supporting enterprise-scale operations
-- **Production Ready:** Includes comprehensive deployment scripts, monitoring, and security features for real-world use
+- **Production Ready:** Includes comprehensive deployment scripts, monitoring, and security features
 
 #### 🔧 Key Features
 - **Double Validation Architecture:** Input validation with Llama Prompt Guard 2 and output validation with Gemini 2.0 Flash
@@ -265,8 +265,8 @@ A comprehensive project demonstrating how to fine-tune GPT-4o-mini models for ho
 Enterprises want to use LLMs for customer-facing chatbots, but **GPT-4 costs are prohibitive at scale**. Running thousands of intent classification queries per day quickly becomes expensive. How do you get GPT-4 quality at GPT-4o-mini prices?
 
 #### 💼 Why This Project Matters
-- **Business Value:** Achieved **60% accuracy vs GPT-4.1's 52%** while reducing operational costs by up to **90%** through smaller, specialized models
-- **Breadth & Depth:** Covers complete ML pipeline from dataset creation to production deployment with real-world performance metrics
+- **Business Value:** Achieved **60% accuracy vs GPT-4.1's 52%** while demonstrating potential operational cost reduction of up to **90%** through smaller, specialized models
+- **Breadth & Depth:** Covers complete ML pipeline from dataset creation to deployment with real-world performance metrics
 - **Scalability:** Demonstrates how domain-specific fine-tuning scales better than general-purpose large models for specific use cases
 - **Production Ready:** Includes comprehensive evaluation metrics, deployment guides, and cost analysis for business decision-making
 
@@ -312,7 +312,7 @@ A production-ready content moderation system leveraging OpenAI's moderation API 
 Every AI-powered platform needs content moderation to prevent harmful outputs, but **building and maintaining moderation systems is expensive**. You need to integrate multiple AI vendors, handle different transport protocols, and deploy across cloud/on-prem/edge environments. How do you get enterprise content safety without enterprise costs?
 
 #### 💼 Why This Project Matters
-- **Business Value:** Provides **free, scalable content moderation** using OpenAI's API, protecting platforms from harmful content while maintaining user experience
+- **Business Value:** Demonstrates **free, scalable content moderation** using OpenAI's API, protecting platforms from harmful content while maintaining user experience
 - **Breadth & Depth:** Demonstrates cross-vendor AI integration (Google ADK + OpenAI + Llama) with dual transport protocols
 - **Scalability:** Supports both local development and cloud deployment with comprehensive scaling options
 - **Production Ready:** Complete deployment guides for cloud, on-premises, and hybrid environments
@@ -426,7 +426,7 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📊 Project Statistics
 
-- **Total Projects:** 7 major projects including POCs optimized for production
+- **Total Projects:** 7 major projects with production-ready architectures
 - **GitHub Stars:** 11+ across repositories
 - **Technologies Used:** 25+ AI/ML frameworks and tools
 - **Cloud Platforms:** Google Cloud (Vertex AI), AWS, Azure with multi-cloud expertise
@@ -436,18 +436,19 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 🎯 Key Achievements
 
+- **Production Experience:** 10 years at PayPal building identity platform serving millions of daily requests
 - **AI-Driven Platform Modernization:** Built RMD Advisor demonstrating \$800K+ ROI potential through RAG + legacy Java integration
 - **Vibe Engineering Pioneer:** Demonstrated 10x development velocity using AI tools (Cursor, Claude, Antigravity) while maintaining Staff+ architectural standards
 - **Cost Optimization:** Achieved 90% cost reduction while improving accuracy through strategic fine-tuning
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
-- **Production Deployment:** Delivered cloud-native solutions with comprehensive CI/CD and monitoring
 - **Thought Leadership:** Published 4 articles on AI agent development, RAG architecture, and LLM optimization
-- **Open Source Contribution:** Created and published datasets and POCs for GenAI community benefit
+- **Open Source Contribution:** Created and published datasets and architectures for GenAI community benefit
 
 ## 📈 Impact Metrics
 
-- **Business ROI:** \$800K+ potential annual savings demonstrated in wealth management AI project
+- **Production Scale:** 10 years building PayPal systems serving millions of users
+- **Business ROI:** \$800K+ potential annual savings modeled in wealth management AI project
 - **Development Speed:** 10x faster time-to-production using AI-augmented development
 - **Performance Improvements:** 130% accuracy improvement over base models through specialized optimization
 - **Cost Savings:** Up to 90% reduction in operational costs through efficient architecture
