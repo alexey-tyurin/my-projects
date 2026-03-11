@@ -56,7 +56,7 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 **Article:** [I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/@altyurin3/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-94ecabd1dd10)
 
 #### 📋 Description
-An **original open-source contribution to the MCP ecosystem** — a standalone chaos/fault injection framework for Model Context Protocol projects. Injects faults at the transport level so resilience wrappers (circuit breakers, retries, timeouts) exercise naturally — without changing application code. Published as a reusable npm package with **zero runtime dependencies**, **8 fault types**, **3 transport interceptors**, and **65 test cases** with 80%+ coverage thresholds. Currently available for Node.js/TypeScript, with Python version planned.
+An **original open-source contribution to the MCP ecosystem** — a standalone chaos/fault injection framework for Model Context Protocol projects. Injects faults at the transport level so resilience wrappers (circuit breakers, retries, timeouts) exercise naturally — without changing application code. Available in **both TypeScript (npm) and Python (PyPI)** with **zero runtime dependencies**, **8 fault types**, **3 transport interceptors**, and **65+ test cases** with 80%+ coverage thresholds.
 
 #### 🎯 The Business Problem
 MCP is becoming the standard for connecting AI agents to external tools — but **no systematic way existed to validate that resilience patterns actually work under failure**. Teams building production MCP agents implement circuit breakers, retries, and timeouts, but never test them against realistic faults. Traditional unit tests validate the happy path; production outages expose the *recovery path*. Without a purpose-built chaos testing tool, teams discover their resilience gaps in production — when users are already affected.
@@ -82,12 +82,13 @@ MCP is becoming the standard for connecting AI agents to external tools — but 
 | Malformed JSON | Corrupted responses from tool servers | `corruptResponse` |
 | Schema mismatch | Valid JSON with missing/wrong fields — the silent killer | `missingFields` |
 
-- **3 Transport Interceptors:** HTTP (fetch), Redis (9 commands), Auth middleware — covering every integration point in MCP pipelines
+- **3 Transport Interceptors:** HTTP, Redis (9 commands), Auth middleware — covering every integration point in MCP pipelines
+- **Dual Language Support:** Full feature parity across TypeScript (npm) and Python (PyPI) — teams can adopt in whichever stack they use
 - **Scenario Builder:** Define reproducible chaos test scenarios with typed assertions and expected behaviors
 - **Admin REST API + CLI:** Runtime fault injection via 4 REST endpoints or `mcp-chaos` CLI for interactive testing
 - **Probabilistic Injection:** All fault types support configurable probability (0–1) for realistic intermittent failure simulation
-- **Pluggable Logging:** Bring your own logger (pino, winston, console) — compatible with pino's Logger interface directly
-- **Type-Safe Targets:** Projects can define custom `FaultTarget` union types for compile-time safety
+- **Pluggable Logging:** Bring your own logger — pino/winston/console (TS) or stdlib logging (Python)
+- **Type-Safe Targets:** Custom `FaultTarget` union types (TS) and typed dataclasses (Python) for compile-time/runtime safety
 
 #### 🏗️ Architecture
 ```
@@ -101,9 +102,10 @@ MCP is becoming the standard for connecting AI agents to external tools — but 
 |  ★ mcp-chaos-monkey ★                               |
 |  Fault injection at transport level                 |
 |  8 fault types × 3 interceptors                     |
+|  TypeScript (npm) + Python (PyPI)                   |
 +-----------------------------------------------------+
 |  Transport                                          |
-|  (fetch, Redis, auth middleware)                    |
+|  (fetch/httpx, Redis, auth middleware)              |
 +-----------------------------------------------------+
 |  External Service                                   |
 |  (MCP server, API, database, auth provider)         |
@@ -116,20 +118,37 @@ Key Insight: Faults injected BELOW the resilience layer
 
 #### 💻 Tech Stack
 ```
-Runtime: Node.js >=20, TypeScript 5.7+ (strict mode, ES2022)
-Package: npm (ESM, sub-path exports, zero runtime dependencies)
-Testing: Vitest 3.0+ — 65 tests across 8 files, 80%+ coverage
-Linting: ESLint 9 with typescript-eslint strictTypeChecked
-Interfaces: REST Admin API (Express), CLI (mcp-chaos), Programmatic API
-Safety: Triple production guard (NODE_ENV + CHAOS_ENABLED + build exclusion)
-License: MIT
+TypeScript:
+  Runtime: Node.js >=20, TypeScript 5.7+ (strict mode, ES2022)
+  Package: npm (ESM, sub-path exports, zero runtime dependencies)
+  HTTP: fetch interception
+  Testing: Vitest 3.0+ — 65 tests across 8 files, 80%+ coverage
+  Linting: ESLint 9 with typescript-eslint strictTypeChecked
+
+Python:
+  Runtime: Python >=3.11
+  Package: PyPI (zero runtime deps, optional extras: httpx, redis, starlette)
+  HTTP: httpx interception (async + sync)
+  Testing: pytest, 80%+ coverage thresholds
+  Auth: ASGI middleware (Starlette/FastAPI)
+
+Shared:
+  Interfaces: REST Admin API, CLI (mcp-chaos), Programmatic API
+  Safety: Triple production guard (NODE_ENV/ENVIRONMENT + CHAOS_ENABLED + build exclusion)
+  License: MIT
 ```
 
 #### 📊 Test & Quality Metrics
+**TypeScript:**
 - **65 test cases** across 8 test files — controller, all 3 interceptors, admin API, CLI, scenarios, guards
 - **80%+ coverage thresholds** enforced for branches, functions, lines, and statements
 - **1.5:1 test-to-source ratio** — 953 lines of tests for 650 lines of source (1,603 total)
 - **< 1 second** total test execution time (514ms)
+
+**Python:**
+- Full test suite covering controller, all 3 interceptors (HTTP, Redis, Auth), admin handlers, CLI, scenarios, and safety guards
+- **80%+ coverage thresholds** enforced
+- Tests run with pytest and pytest-asyncio for async interceptor validation
 
 #### 📸 Screenshots
 *Architecture diagrams, fault injection examples, and usage patterns available in repository and [Medium article](https://medium.com/@altyurin3/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-94ecabd1dd10)*
@@ -626,7 +645,7 @@ Visualization: matplotlib, seaborn, plotly
 - **AI-Driven Platform Modernization:** Built RMD Advisor demonstrating \$800K+ ROI potential through RAG + legacy Java integration
 - **Vibe Engineering Pioneer:** Demonstrated 10x development velocity using AI tools (Cursor, Claude, Antigravity) while maintaining Staff+ architectural standards
 - **Cost Optimization:** Achieved 90% cost reduction while improving accuracy through strategic fine-tuning
-- **MCP Chaos Engineering Pioneer:** Created the first open-source chaos/fault injection framework for MCP (mcp-chaos-monkey) — an original contribution to the MCP ecosystem adopted for production resilience validation
+- **MCP Chaos Engineering Pioneer:** Created the first open-source chaos/fault injection framework for MCP (mcp-chaos-monkey) — available in both TypeScript and Python, adopted for production resilience validation
 - **MCP Reliability Engineering:** Built comprehensive reliability playbook with 9 production patterns, 317 tests, and chaos engineering framework for MCP-based agents
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
