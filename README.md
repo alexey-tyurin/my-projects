@@ -53,7 +53,7 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 ### 1. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI 🆕
 **Repository:** [https://github.com/alexey-tyurin/mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)
 
-**Article:** [I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/@altyurin3/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-94ecabd1dd10)
+**Article:** [I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)
 
 #### 📋 Description
 An **original open-source contribution to the MCP ecosystem** — a standalone chaos/fault injection framework for Model Context Protocol projects. Injects faults at the transport level so resilience wrappers (circuit breakers, retries, timeouts) exercise naturally — without changing application code. Available in **both TypeScript (npm) and Python (PyPI)** with **zero runtime dependencies**, **8 fault types**, **3 transport interceptors**, and **65+ test cases** with 80%+ coverage thresholds.
@@ -151,14 +151,14 @@ Shared:
 - Tests run with pytest and pytest-asyncio for async interceptor validation
 
 #### 📸 Screenshots
-*Architecture diagrams, fault injection examples, and usage patterns available in repository and [Medium article](https://medium.com/@altyurin3/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-94ecabd1dd10)*
+*Architecture diagrams, fault injection examples, and usage patterns available in repository and [Medium article](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)*
 
 ---
 
 ### 2. Reliable MCP - Production Reliability Patterns for Agentic AI
 **Repository:** [https://github.com/alexey-tyurin/reliable-mcp](https://github.com/alexey-tyurin/reliable-mcp)
 
-**Article:** [MCP Reliability Playbook](https://medium.com/@altyurin3/mcp-reliability-playbook-d6c368f7c515)
+**Article:** [MCP Reliability Playbook](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)
 
 #### 📋 Description
 A production-grade reference implementation demonstrating **9 battle-tested reliability patterns** for building resilient agentic solutions with Model Context Protocol (MCP). Features a multi-container architecture with LangGraphJS agent orchestration, Streamable HTTP MCP servers, fault injection framework, semantic caching, and a pre-deploy evaluation gate—backed by **317 test cases** and **63 evaluation cases**.
@@ -249,7 +249,7 @@ Deployment: Docker, Docker Compose, multi-container
 - **Pre-deploy gate:** Automated quality gate blocking deployment if accuracy < 90%
 
 #### 📸 Screenshots
-*Architecture diagrams, chaos test results, and evaluation metrics available in repository and [Medium article](https://medium.com/@altyurin3/mcp-reliability-playbook-d6c368f7c515)*
+*Architecture diagrams, chaos test results, and evaluation metrics available in repository and [Medium article](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)*
 
 ---
 
@@ -697,8 +697,8 @@ Visualization: matplotlib, seaborn, plotly
 
 Published articles on Medium and AI Accelerator Institute:
 
-- **[I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/@altyurin3/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-94ecabd1dd10)** — Open-source chaos engineering framework for MCP-based agentic AI systems
-- **[MCP Reliability Playbook](https://medium.com/@altyurin3/mcp-reliability-playbook-d6c368f7c515)** — Production reliability patterns for agentic AI with Model Context Protocol
+- **[I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)** — Open-source chaos engineering framework for MCP-based agentic AI systems
+- **[MCP Reliability Playbook](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)** — Production reliability patterns for agentic AI with Model Context Protocol
 - **[Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)** (2024)
 - **[How to build autonomous AI agent with Google A2A protocol](https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-google-a2a-protocol/)**
 - **[Fine-tuning GPT-4o-mini for Hospitality Chatbots: Outperforming GPT-4.1 at a Fraction of the Cost](https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-outperforming-gpt-4-1-at-a-fraction-of-the-cost-1f56e72e9ce0)**
