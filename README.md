@@ -28,7 +28,7 @@
 
 **Staff Software Engineer** with **10 years of production experience at PayPal** serving millions of users, now specializing in **AI-driven Platform Modernization, MCP Reliability Engineering, and Legacy Transformation**. 15+ years of backend/full-stack expertise across large enterprises and fast-moving startups.
 
-Expert in building **production-grade agentic AI systems** using **MCP, RAG architectures, AI agent orchestration (A2A, LangGraph)**, and LLM integration. Creator of **[mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)** — the first open-source chaos engineering framework for MCP — and author of a comprehensive **MCP Reliability Playbook** with 9 production resilience patterns. Practitioner of Vibe Engineering (AI-augmented development) and Context Engineering for production GenAI solutions. **Published author** on MCP reliability, AI agent development, and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
+Expert in building **production-grade agentic AI systems** using **MCP, RAG architectures, AI agent orchestration (A2A, LangGraph)**, and LLM integration. Creator of **[mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)** — the first open-source chaos engineering framework for MCP — and author of a comprehensive **MCP Reliability Playbook** with 9 production resilience patterns. Practitioner of Vibe Engineering (AI-augmented development) and Context Engineering for production GenAI solutions. **Published author** with a **3-part MCP Reliability Series accepted by Google Cloud – Community** on Medium, plus articles on AI agent development and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
 
 > **💡 I don't just build MCP agents — I make them survive production.** I combine enterprise-scale reliability engineering (10 years at PayPal) with deep GenAI architectural knowledge, creating open-source tools and publishing playbooks that help the entire MCP community ship resilient agentic systems.
 
@@ -53,7 +53,9 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 ### 1. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI 🆕
 **Repository:** [https://github.com/alexey-tyurin/mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)
 
-**Article:** [I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)
+**Articles (MCP Reliability Series — published in Google Cloud – Community):**
+- Part 2: [I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835) *(TypeScript)*
+- Part 3: [MCP Chaos Monkey Now Speaks Python](https://medium.com/google-cloud/mcp-chaos-monkey-now-speaks-python-d0cd60bfd29e) *(Python)*
 
 #### 📋 Description
 An **original open-source contribution to the MCP ecosystem** — a standalone chaos/fault injection framework for Model Context Protocol projects. Injects faults at the transport level so resilience wrappers (circuit breakers, retries, timeouts) exercise naturally — without changing application code. Available in **both TypeScript (npm) and Python (PyPI)** with **zero runtime dependencies**, **8 fault types**, **3 transport interceptors**, and **65+ test cases** with 80%+ coverage thresholds.
@@ -151,14 +153,15 @@ Shared:
 - Tests run with pytest and pytest-asyncio for async interceptor validation
 
 #### 📸 Screenshots
-*Architecture diagrams, fault injection examples, and usage patterns available in repository and [Medium article](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)*
+*Architecture diagrams, fault injection examples, and usage patterns available in repository and the [Google Cloud – Community MCP Reliability Series](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)*
 
 ---
 
 ### 2. Reliable MCP - Production Reliability Patterns for Agentic AI
 **Repository:** [https://github.com/alexey-tyurin/reliable-mcp](https://github.com/alexey-tyurin/reliable-mcp)
 
-**Article:** [MCP Reliability Playbook](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)
+**Article (MCP Reliability Series — published in Google Cloud – Community):**
+- Part 1: [MCP Reliability Playbook — A 9-Pattern Playbook for Resilient AI Agents](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)
 
 #### 📋 Description
 A production-grade reference implementation demonstrating **9 battle-tested reliability patterns** for building resilient agentic solutions with Model Context Protocol (MCP). Features a multi-container architecture with LangGraphJS agent orchestration, Streamable HTTP MCP servers, fault injection framework, semantic caching, and a pre-deploy evaluation gate—backed by **317 test cases** and **63 evaluation cases**.
@@ -249,7 +252,7 @@ Deployment: Docker, Docker Compose, multi-container
 - **Pre-deploy gate:** Automated quality gate blocking deployment if accuracy < 90%
 
 #### 📸 Screenshots
-*Architecture diagrams, chaos test results, and evaluation metrics available in repository and [Medium article](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)*
+*Architecture diagrams, chaos test results, and evaluation metrics available in repository and the [Google Cloud – Community MCP Reliability Series](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)*
 
 ---
 
@@ -649,7 +652,7 @@ Visualization: matplotlib, seaborn, plotly
 - **MCP Reliability Engineering:** Built comprehensive reliability playbook with 9 production patterns, 317 tests, and chaos engineering framework for MCP-based agents
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
-- **Thought Leadership:** Published 6 articles on AI agent development, MCP chaos engineering, MCP reliability, RAG architecture, and LLM optimization
+- **Thought Leadership:** Published 7 articles including a **3-part MCP Reliability Series** accepted by **Google Cloud – Community** on Medium — covering production resilience patterns, chaos engineering for TypeScript, and chaos engineering for Python
 - **Open Source Contribution:** Created and published datasets and architectures for GenAI community benefit
 
 ## 📈 Impact Metrics
@@ -695,10 +698,14 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📝 Publications
 
-Published articles on Medium and AI Accelerator Institute:
+Published articles on Medium (Google Cloud – Community) and AI Accelerator Institute:
 
-- **[I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)** — Open-source chaos engineering framework for MCP-based agentic AI systems
-- **[MCP Reliability Playbook](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)** — Production reliability patterns for agentic AI with Model Context Protocol
+**MCP Reliability Series** *(all 3 parts published in Google Cloud – Community)*
+- Part 1: **[MCP Reliability Playbook — A 9-Pattern Playbook for Resilient AI Agents](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)** — 9 production resilience patterns for MCP-based agents
+- Part 2: **[I Built a Chaos Monkey for MCP — Here's Why and How](https://medium.com/google-cloud/i-built-a-chaos-monkey-for-mcp-heres-why-and-how-589d2ce27835)** — Original open-source chaos engineering framework for MCP (TypeScript)
+- Part 3: **[MCP Chaos Monkey Now Speaks Python](https://medium.com/google-cloud/mcp-chaos-monkey-now-speaks-python-d0cd60bfd29e)** — Python port of mcp-chaos-monkey with full feature parity
+
+**Other Articles**
 - **[Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)** (2024)
 - **[How to build autonomous AI agent with Google A2A protocol](https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-google-a2a-protocol/)**
 - **[Fine-tuning GPT-4o-mini for Hospitality Chatbots: Outperforming GPT-4.1 at a Fraction of the Cost](https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-outperforming-gpt-4-1-at-a-fraction-of-the-cost-1f56e72e9ce0)**
