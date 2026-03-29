@@ -27,20 +27,20 @@
 
 **LinkedIn:** [https://www.linkedin.com/in/alexey-tyurin-36893287/](https://www.linkedin.com/in/alexey-tyurin-36893287/)
 
-**Staff Software Engineer** with **10 years of production experience at PayPal** serving millions of users, now specializing in **AI-driven Platform Modernization, MCP Reliability Engineering, and Legacy Transformation**. 15+ years of backend/full-stack expertise across large enterprises and fast-moving startups.
+**Staff Software Engineer** with **10 years of production experience at PayPal** serving millions of users, now specializing in **building production-grade agentic AI systems, AI-driven Platform Modernization, and MCP Reliability Engineering**. 15+ years of backend/full-stack expertise across large enterprises and fast-moving startups.
 
-Focused on building **production-grade agentic AI systems** — not just the agent, but the infrastructure around it: safety layers, evaluation pipelines, resilience, observability, and deployment. Built and deployed a **[live AI agent harness](https://alexeytyurin.org/ai-agent/)** on AWS with 16 infrastructure layers, 976 tests, chaos engineering, and an eval gate that blocks deployment on quality regression. Understands the practical problems of running AI agents in production — hallucination control, model selection trade-offs (accuracy vs cost vs latency), graceful degradation when services fail, and semantic caching calibration.
+Focused on the full stack of production AI — not just the agent, but the infrastructure around it: safety layers, evaluation pipelines, resilience, observability, and deployment. Built and deployed a **[live AI agent harness](https://alexeytyurin.org/ai-agent/)** on AWS with 16 infrastructure layers, 976 tests, chaos engineering, and an eval gate that blocks deployment on quality regression. Experienced with the practical problems of running AI agents in production — hallucination control, model selection trade-offs (accuracy vs cost vs latency), graceful degradation when services fail, and semantic caching calibration.
 
 Creator of **[mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)** — the first open-source chaos engineering framework for MCP — and author of a comprehensive **MCP Reliability Playbook** with 9 production resilience patterns. Experienced with **RAG architectures, LangGraph agent orchestration, LLM fine-tuning, and multi-layer content safety** (AWS Bedrock Guardrails, hallucination judges, scope classification). **Published author** with a **3-part MCP Reliability Series accepted by Google Cloud – Community** on Medium, plus articles on AI agent infrastructure and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
 
 > **💡 I don't just build AI agents — I build the infrastructure that makes them production-ready.** I combine enterprise-scale reliability engineering (10 years at PayPal) with hands-on experience deploying and operating AI systems on AWS — from chaos testing and eval gates to multi-layer safety and real-time observability.
 
-Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. The projects in this portfolio demonstrate production-ready architectures addressing genuine business challenges — from AI agent infrastructure and chaos engineering frameworks to RAG systems and multi-agent orchestration — with published technical articles validating every approach.
+Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. The projects in this portfolio demonstrate production-ready architectures — from AI agent infrastructure and chaos engineering frameworks to RAG systems and multi-agent orchestration — with published technical articles validating every approach.
 
 ### 🚀 Skills and Interests
 
 - **AI/ML & GenAI:** MCP Reliability & Chaos Engineering, RAG Architectures, LangGraph, LangChain, MCP, Google A2A/ADK, GPT-4/5, Claude, Gemini, Llama, Prompt Engineering, Fine-Tuning, AI Agent Orchestration, Vector Databases, LLM Security
-- **Platform Modernization:** Legacy System Transformation, Multi-Tenancy & Distributed Systems, Domain-Driven Design, Event-Driven & Microservices Architecture
+- **Platform Modernization:** AI-Driven Modernization, Multi-Tenancy & Distributed Systems, Domain-Driven Design, Event-Driven & Microservices Architecture
 - **Cloud & Infrastructure:** Google Cloud (Vertex AI), AWS (SageMaker, EC2, RDS), Azure AI, Docker, Kubernetes, Terraform
 - **Programming:** Java (Spring, Hibernate), Python (AI/ML, FastAPI, async), JavaScript/TypeScript, React, SQL, GraphQL
 - **Data & Events:** Kafka, Redis (Streams, Pub/Sub), PostgreSQL, Oracle, MongoDB, CQRS patterns
