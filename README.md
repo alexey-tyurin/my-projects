@@ -4,15 +4,16 @@
 
 - [About Me](#-about-me)
 - [Featured Projects](#-featured-projects)
-  - [1. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI](#1-mcp-chaos-monkey---chaos-engineering-framework-for-agentic-ai-new)
-  - [2. Reliable MCP - Production Reliability Patterns for Agentic AI](#2-reliable-mcp---production-reliability-patterns-for-agentic-ai)
-  - [3. RMD Advisor - AI-Powered Retirement Distribution Assistant](#3-rmd-advisor---ai-powered-retirement-distribution-assistant)
-  - [4. Messaging Service - Production-Grade Distributed System](#4-messaging-service---production-grade-distributed-system-vibe-engineering-showcase)
-  - [5. A2A Double Validation - Multi-Agent Autonomous System](#5-a2a-double-validation---poc-for-multi-agent-autonomous-system)
-  - [6. Fine-Tuning GPT for Hospitality](#6-fine-tuning-gpt-for-hospitality---cost-effective-ai-optimization)
-  - [7. AI Agent with MCP - Content Moderation System](#7-ai-agent-with-mcp---content-moderation-system)
-  - [8. AI Agent - ArXiv Research Paper Intelligence](#8-ai-agent---arxiv-research-paper-intelligence)
-  - [9. Imbalanced Datasets - Machine Learning Optimization](#9-imbalanced-datasets---machine-learning-optimization)
+  - [1. AI Agent Harness - Production Infrastructure for AI Agents](#1-ai-agent-harness---production-infrastructure-for-ai-agents-new)
+  - [2. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI](#2-mcp-chaos-monkey---chaos-engineering-framework-for-agentic-ai)
+  - [3. Reliable MCP - Production Reliability Patterns for Agentic AI](#3-reliable-mcp---production-reliability-patterns-for-agentic-ai)
+  - [4. RMD Advisor - AI-Powered Retirement Distribution Assistant](#4-rmd-advisor---ai-powered-retirement-distribution-assistant)
+  - [5. Messaging Service - Production-Grade Distributed System](#5-messaging-service---production-grade-distributed-system-vibe-engineering-showcase)
+  - [6. A2A Double Validation - Multi-Agent Autonomous System](#6-a2a-double-validation---poc-for-multi-agent-autonomous-system)
+  - [7. Fine-Tuning GPT for Hospitality](#7-fine-tuning-gpt-for-hospitality---cost-effective-ai-optimization)
+  - [8. AI Agent with MCP - Content Moderation System](#8-ai-agent-with-mcp---content-moderation-system)
+  - [9. AI Agent - ArXiv Research Paper Intelligence](#9-ai-agent---arxiv-research-paper-intelligence)
+  - [10. Imbalanced Datasets - Machine Learning Optimization](#10-imbalanced-datasets---machine-learning-optimization)
 - [Project Statistics](#-project-statistics)
 - [Key Achievements](#-key-achievements)
 - [Impact Metrics](#-impact-metrics)
@@ -28,11 +29,13 @@
 
 **Staff Software Engineer** with **10 years of production experience at PayPal** serving millions of users, now specializing in **AI-driven Platform Modernization, MCP Reliability Engineering, and Legacy Transformation**. 15+ years of backend/full-stack expertise across large enterprises and fast-moving startups.
 
-Expert in building **production-grade agentic AI systems** using **MCP, RAG architectures, AI agent orchestration (A2A, LangGraph)**, and LLM integration. Creator of **[mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)** — the first open-source chaos engineering framework for MCP — and author of a comprehensive **MCP Reliability Playbook** with 9 production resilience patterns. Practitioner of Vibe Engineering (AI-augmented development) and Context Engineering for production GenAI solutions. **Published author** with a **3-part MCP Reliability Series accepted by Google Cloud – Community** on Medium, plus articles on AI agent development and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
+Focused on building **production-grade agentic AI systems** — not just the agent, but the infrastructure around it: safety layers, evaluation pipelines, resilience, observability, and deployment. Built and deployed a **[live AI agent harness](https://alexeytyurin.org/ai-agent/)** on AWS with 16 infrastructure layers, 976 tests, chaos engineering, and an eval gate that blocks deployment on quality regression. Understands the practical problems of running AI agents in production — hallucination control, model selection trade-offs (accuracy vs cost vs latency), graceful degradation when services fail, and semantic caching calibration.
 
-> **💡 I don't just build MCP agents — I make them survive production.** I combine enterprise-scale reliability engineering (10 years at PayPal) with deep GenAI architectural knowledge, creating open-source tools and publishing playbooks that help the entire MCP community ship resilient agentic systems.
+Creator of **[mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)** — the first open-source chaos engineering framework for MCP — and author of a comprehensive **MCP Reliability Playbook** with 9 production resilience patterns. Experienced with **RAG architectures, LangGraph agent orchestration, LLM fine-tuning, and multi-layer content safety** (AWS Bedrock Guardrails, hallucination judges, scope classification). **Published author** with a **3-part MCP Reliability Series accepted by Google Cloud – Community** on Medium, plus articles on AI agent infrastructure and LLM optimization. **Google Cloud Certified Professional Machine Learning Engineer.**
 
-Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. The projects in this portfolio demonstrate production-ready architectures addressing genuine business challenges — from chaos engineering frameworks and reliability playbooks to RAG systems and multi-agent orchestration — with published technical articles validating every approach.
+> **💡 I don't just build AI agents — I build the infrastructure that makes them production-ready.** I combine enterprise-scale reliability engineering (10 years at PayPal) with hands-on experience deploying and operating AI systems on AWS — from chaos testing and eval gates to multi-layer safety and real-time observability.
+
+Skilled in guiding teams through complex project phases from ideation to deployment using agile methodologies. The projects in this portfolio demonstrate production-ready architectures addressing genuine business challenges — from AI agent infrastructure and chaos engineering frameworks to RAG systems and multi-agent orchestration — with published technical articles validating every approach.
 
 ### 🚀 Skills and Interests
 
@@ -50,7 +53,76 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 
 > **These projects demonstrate production-ready architectures addressing real business challenges.** Each project includes comprehensive documentation, deployment configurations, and published technical articles validating the architectural approaches. Built to showcase how AI capabilities can be integrated with enterprise systems.
 
-### 1. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI 🆕
+### 1. AI Agent Harness - Production Infrastructure for AI Agents 🆕
+**Repository:** [https://github.com/alexey-tyurin/ai-agent-harness](https://github.com/alexey-tyurin/ai-agent-harness)
+
+**Live System:** [https://alexeytyurin.org/ai-agent/](https://alexeytyurin.org/ai-agent/)
+
+**Article:**
+- [How I Built an AI Agent Harness in Production](https://medium.com/@altyurin3/how-i-built-an-ai-agent-harness-in-production-d8a99c6e122d)
+
+#### 📋 Description
+A **live, production-deployed** customer service RAG chatbot on AWS that demonstrates the full infrastructure harness surrounding an AI agent. The LLM generates answers — everything else (retrieval, routing, safety, caching, evaluation, resilience, monitoring, deployment) is the harness. The system serves real traffic at [alexeytyurin.org/ai-agent](https://alexeytyurin.org/ai-agent/) and is backed by **976 tests** and **5 automated evaluation suites**.
+
+#### 🎯 The Business Problem
+Building AI agents that work in demos is straightforward. Building AI agents that are safe, reliable, observable, and maintainable in production requires an entirely different set of engineering. The LLM is roughly 10% of a production AI system — the other 90% is the infrastructure that wraps around it. Most teams discover this gap after deployment, when hallucinations reach users, services fail without graceful degradation, and there's no way to measure whether a prompt change improved or degraded quality.
+
+#### 💼 Why This Project Matters
+- **Live Production System:** Not a prototype — deployed on AWS ECS Fargate, serving real traffic with JWT authentication, WAF protection, and multi-AZ availability
+- **16 Infrastructure Layers:** RAG pipeline, agent routing, model selection, auth, content safety, network security, secrets management, monitoring, observability, evaluation, eval gate, resilience, availability, caching, ingestion pipeline, deployment
+- **Measurable Quality:** 95.7% faithfulness, 0.6% hallucination rate, 97% intent classification accuracy (fine-tuned LLM), all 7 eval thresholds passing
+- **Chaos Engineering:** 41 chaos test scenarios with real fault injection — no mocking, resilience stack exercises end-to-end
+- **Eval Gate:** Deploy script blocks production releases if any of 7 quality metrics regresses below threshold
+
+#### 🔧 Key Features
+- **RAG Pipeline:** Two-stage retrieval (embed → retrieve → rerank) with metadata filtering against a curated knowledge base
+- **Agent Routing:** 12-node LangGraph state machine with conditional paths for in-scope, ambiguous, off-topic, greeting, and follow-up queries
+- **Model Selection:** 4 models benchmarked across accuracy-cost-latency; fine-tuned LLM for intent classification (97% accuracy, 20pp improvement over base)
+- **Multi-Layer Content Safety:** Input validation, AWS Bedrock Guardrails (input + output, including jailbreak detection), scope classification, conditional hallucination judge
+- **Resilience:** Per-service timeout, retry with exponential backoff, circuit breaker; graceful degradation for non-critical services
+- **Observability:** Custom Langfuse scores per request, dashboards, experiment tracking for prompt/model changes
+- **Monitoring:** CloudWatch logging, Container Insights, 4 SNS alarms (billing, task health, 5xx errors, unhealthy targets)
+- **Semantic Caching:** Empirically calibrated similarity threshold; 40x latency reduction on cache hits (11s → 0.5s)
+- **Availability:** ALB across 2 availability zones, ECS health checks with automatic task replacement
+
+#### 🏗️ Architecture
+![Architecture](screenshots/ai-agent-harness-architecture.png)
+
+#### 💻 Tech Stack
+```
+Language: Python
+API: FastAPI
+Agent: LangChain, LangGraph (12-node state machine)
+LLMs: OpenAI (gpt-4o-mini, gpt-5-nano, ft:gpt-4.1-nano)
+Embeddings & Reranker: Voyage AI
+Vector Store: Qdrant Cloud
+Cache & Sessions: Redis (Upstash)
+Content Safety: AWS Bedrock Guardrails
+Network Security: AWS WAF
+Secrets: AWS Secrets Manager
+Monitoring: AWS CloudWatch, SNS
+Observability: Langfuse
+Evaluation: RAGAS, DeepEval
+Infrastructure: Docker, ECS Fargate, Terraform
+```
+
+#### 📊 Test & Evaluation Coverage
+- **976 tests:** 827 unit + 41 chaos + 108 integration
+- **5 evaluation suites:** 237 queries across faithfulness, hallucination, intent classification, scope handling, and multi-turn conversations
+- **7 threshold metrics:** All passing — eval gate blocks deployment on any regression
+- **Chaos testing:** 41 scenarios with real fault injection through the production pipeline
+
+#### 📸 Screenshots
+
+![Chat UI](screenshots/ai-agent-harness-chat.png)
+*Live chat interface with multi-turn conversation*
+
+![Eval Results](screenshots/ai-agent-harness-eval.png)
+*Evaluation suite results — all 7 thresholds PASS*
+
+---
+
+### 2. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI
 **Repository:** [https://github.com/alexey-tyurin/mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)
 
 **Articles (MCP Reliability Series — published in Google Cloud – Community):**
@@ -157,7 +229,7 @@ Shared:
 
 ---
 
-### 2. Reliable MCP - Production Reliability Patterns for Agentic AI
+### 3. Reliable MCP - Production Reliability Patterns for Agentic AI
 **Repository:** [https://github.com/alexey-tyurin/reliable-mcp](https://github.com/alexey-tyurin/reliable-mcp)
 
 **Article (MCP Reliability Series — published in Google Cloud – Community):**
@@ -256,7 +328,7 @@ Deployment: Docker, Docker Compose, multi-container
 
 ---
 
-### 3. RMD Advisor - AI-Powered Retirement Distribution Assistant
+### 4. RMD Advisor - AI-Powered Retirement Distribution Assistant
 **Repository:** [https://github.com/alexey-tyurin/rmd-advisor](https://github.com/alexey-tyurin/rmd-advisor)
 
 **Article:** [Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)
@@ -322,7 +394,7 @@ Testing: pytest, curl-based API testing
 
 ---
 
-### 4. Messaging Service - Production-Grade Distributed System (Vibe Engineering Showcase)
+### 5. Messaging Service - Production-Grade Distributed System (Vibe Engineering Showcase)
 **Repository:** [https://github.com/alexey-tyurin/messaging-service](https://github.com/alexey-tyurin/messaging-service)
 
 #### 📋 Description
@@ -416,7 +488,7 @@ Development: Cursor + Claude Sonnet 4.5, Google Antigravity
 
 ---
 
-### 5. A2A Double Validation - POC for Multi-Agent Autonomous System
+### 6. A2A Double Validation - POC for Multi-Agent Autonomous System
 **Repository:** [https://github.com/alexey-tyurin/a2a-double-validation](https://github.com/alexey-tyurin/a2a-double-validation)
 
 #### 📋 Description
@@ -463,7 +535,7 @@ https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-goo
 
 ---
 
-### 6. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
+### 7. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
 **Repository:** [https://github.com/alexey-tyurin/fine-tuning-gpt](https://github.com/alexey-tyurin/fine-tuning-gpt)
 
 #### 📋 Description
@@ -510,7 +582,7 @@ https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-o
 
 ---
 
-### 7. AI Agent with MCP - Content Moderation System
+### 8. AI Agent with MCP - Content Moderation System
 **Repository:** [https://github.com/alexey-tyurin/ai-agent-mcp](https://github.com/alexey-tyurin/ai-agent-mcp)
 
 #### 📋 Description
@@ -553,7 +625,7 @@ Testing: Automated test suites, integration testing
 
 ---
 
-### 8. AI Agent - ArXiv Research Paper Intelligence
+### 9. AI Agent - ArXiv Research Paper Intelligence
 **Repository:** [https://github.com/alexey-tyurin/ai-agent](https://github.com/alexey-tyurin/ai-agent)
 
 #### 📋 Description
@@ -592,7 +664,7 @@ APIs: RESTful APIs, rate limiting, error handling
 
 ---
 
-### 9. Imbalanced Datasets - Machine Learning Optimization
+### 10. Imbalanced Datasets - Machine Learning Optimization
 **Repository:** [https://github.com/alexey-tyurin/imbalanced_datasets](https://github.com/alexey-tyurin/imbalanced_datasets)
 
 #### 📋 Description
@@ -634,7 +706,7 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📊 Project Statistics
 
-- **Total Projects:** 9 major projects with production-ready architectures
+- **Total Projects:** 10 major projects with production-ready architectures
 - **GitHub Stars:** 11+ across repositories
 - **Technologies Used:** 25+ AI/ML frameworks and tools
 - **Cloud Platforms:** Google Cloud (Vertex AI), AWS, Azure with multi-cloud expertise
@@ -652,7 +724,7 @@ Visualization: matplotlib, seaborn, plotly
 - **MCP Reliability Engineering:** Built comprehensive reliability playbook with 9 production patterns, 317 tests, and chaos engineering framework for MCP-based agents
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
-- **Thought Leadership:** Published 7 articles including a **3-part MCP Reliability Series** accepted by **Google Cloud – Community** on Medium — covering production resilience patterns, chaos engineering for TypeScript, and chaos engineering for Python
+- **Thought Leadership:** Published 8 articles including a **3-part MCP Reliability Series** accepted by **Google Cloud – Community** on Medium — covering production resilience patterns, chaos engineering for TypeScript, and chaos engineering for Python
 - **Open Source Contribution:** Created and published datasets and architectures for GenAI community benefit
 
 ## 📈 Impact Metrics
@@ -706,6 +778,7 @@ Published articles on Medium (Google Cloud – Community) and AI Accelerator Ins
 - Part 3: **[MCP Chaos Monkey Now Speaks Python](https://medium.com/google-cloud/mcp-chaos-monkey-now-speaks-python-d0cd60bfd29e)** — Python port of mcp-chaos-monkey with full feature parity
 
 **Other Articles**
+- **[How I Built an AI Agent Harness in Production](https://medium.com/@altyurin3/how-i-built-an-ai-agent-harness-in-production-d8a99c6e122d)** — Production infrastructure around an AI agent: 16 layers, 976 tests, live on AWS
 - **[Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)** (2024)
 - **[How to build autonomous AI agent with Google A2A protocol](https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-google-a2a-protocol/)**
 - **[Fine-tuning GPT-4o-mini for Hospitality Chatbots: Outperforming GPT-4.1 at a Fraction of the Cost](https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-outperforming-gpt-4-1-at-a-fraction-of-the-cost-1f56e72e9ce0)**
