@@ -27,7 +27,7 @@
 
 **LinkedIn:** [https://www.linkedin.com/in/alexey-tyurin-36893287/](https://www.linkedin.com/in/alexey-tyurin-36893287/)
 
-**Staff Software Engineer** with **10 years of production experience at PayPal** serving millions of users, now specializing in **building production-grade agentic AI systems, AI-driven Platform Modernization, and MCP Reliability Engineering**. 15+ years of backend/full-stack expertise across large enterprises and fast-moving startups.
+**Staff Software Engineer** with **10 years of production experience at PayPal** serving millions of users. Specializes in **building production-grade agentic AI systems, AI-driven Platform Modernization, and MCP Reliability Engineering** — with multiple deployed projects covering agent infrastructure, chaos engineering, and RAG architectures. 15+ years of backend/full-stack expertise across large enterprises and fast-moving startups.
 
 Focused on the full stack of production AI — not just the agent, but the infrastructure around it: safety layers, evaluation pipelines, resilience, observability, and deployment. Built and deployed a **[live AI agent harness](https://alexeytyurin.org/ai-agent/)** on AWS with 16 infrastructure layers, 976 tests, chaos engineering, and an eval gate that blocks deployment on quality regression. Experienced with the practical problems of running AI agents in production — hallucination control, model selection trade-offs (accuracy vs cost vs latency), graceful degradation when services fail, and semantic caching calibration.
 
