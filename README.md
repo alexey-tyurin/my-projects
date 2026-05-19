@@ -4,16 +4,17 @@
 
 - [About Me](#-about-me)
 - [Featured Projects](#-featured-projects)
-  - [1. AI Agent Harness - Production Infrastructure for AI Agents](#1-ai-agent-harness---production-infrastructure-for-ai-agents-new)
-  - [2. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI](#2-mcp-chaos-monkey---chaos-engineering-framework-for-agentic-ai)
-  - [3. Reliable MCP - Production Reliability Patterns for Agentic AI](#3-reliable-mcp---production-reliability-patterns-for-agentic-ai)
-  - [4. RMD Advisor - AI-Powered Retirement Distribution Assistant](#4-rmd-advisor---ai-powered-retirement-distribution-assistant)
-  - [5. Messaging Service - Production-Grade Distributed System](#5-messaging-service---production-grade-distributed-system-vibe-engineering-showcase)
-  - [6. A2A Double Validation - Multi-Agent Autonomous System](#6-a2a-double-validation---poc-for-multi-agent-autonomous-system)
-  - [7. Fine-Tuning GPT for Hospitality](#7-fine-tuning-gpt-for-hospitality---cost-effective-ai-optimization)
-  - [8. AI Agent with MCP - Content Moderation System](#8-ai-agent-with-mcp---content-moderation-system)
-  - [9. AI Agent - ArXiv Research Paper Intelligence](#9-ai-agent---arxiv-research-paper-intelligence)
-  - [10. Imbalanced Datasets - Machine Learning Optimization](#10-imbalanced-datasets---machine-learning-optimization)
+  - [1. Autonomous Agentic Stack 2026 - Production Agent on Serverless GPU](#1-autonomous-agentic-stack-2026---production-agent-on-serverless-gpu-new)
+  - [2. AI Agent Harness - Production Infrastructure for AI Agents](#2-ai-agent-harness---production-infrastructure-for-ai-agents)
+  - [3. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI](#3-mcp-chaos-monkey---chaos-engineering-framework-for-agentic-ai)
+  - [4. Reliable MCP - Production Reliability Patterns for Agentic AI](#4-reliable-mcp---production-reliability-patterns-for-agentic-ai)
+  - [5. RMD Advisor - AI-Powered Retirement Distribution Assistant](#5-rmd-advisor---ai-powered-retirement-distribution-assistant)
+  - [6. Messaging Service - Production-Grade Distributed System](#6-messaging-service---production-grade-distributed-system-vibe-engineering-showcase)
+  - [7. A2A Double Validation - Multi-Agent Autonomous System](#7-a2a-double-validation---poc-for-multi-agent-autonomous-system)
+  - [8. Fine-Tuning GPT for Hospitality](#8-fine-tuning-gpt-for-hospitality---cost-effective-ai-optimization)
+  - [9. AI Agent with MCP - Content Moderation System](#9-ai-agent-with-mcp---content-moderation-system)
+  - [10. AI Agent - ArXiv Research Paper Intelligence](#10-ai-agent---arxiv-research-paper-intelligence)
+  - [11. Imbalanced Datasets - Machine Learning Optimization](#11-imbalanced-datasets---machine-learning-optimization)
 - [Project Statistics](#-project-statistics)
 - [Key Achievements](#-key-achievements)
 - [Impact Metrics](#-impact-metrics)
@@ -53,7 +54,75 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 
 > **These projects demonstrate production-ready architectures addressing real business challenges.** Each project includes comprehensive documentation, deployment configurations, and published technical articles validating the architectural approaches. Built to showcase how AI capabilities can be integrated with enterprise systems.
 
-### 1. AI Agent Harness - Production Infrastructure for AI Agents 🆕
+### 1. Autonomous Agentic Stack 2026 - Production Agent on Serverless GPU 🆕
+**Repository:** [https://github.com/alexey-tyurin/autonomous-agentic-stack-2026](https://github.com/alexey-tyurin/autonomous-agentic-stack-2026)
+
+**Article (published in Google Cloud – Community):**
+- [How I Shipped an Autonomous Agentic System on a 2026 Serverless-GPU Stack](https://medium.com/google-cloud/how-i-shipped-an-autonomous-agentic-system-on-a-2026-serverless-gpu-stack-648658802fd5)
+
+#### 📋 Description
+A production autonomous agent built on a 2026 serverless-GPU stack — self-hosted **Gemma 4 26B A4B MoE** on **Modal**, **vLLM** serving, **LangGraph plan-and-execute** with a first-class **Re-planner** node, and a **multi-cloud control plane**. The public repository is the design log: **sixteen production trade-offs** and the reasoning behind each one, with architecture diagrams, a real LangFuse production trace, and a forward-looking R&D section. The code that runs the production system is private; this repo is the architecture and the calls behind it.
+
+#### 🎯 The Business Problem
+In 2026, agentic AI stopped being a research demo and became a production cost center. Teams shipping agents face a forced binary: pay-per-token managed APIs that scale linearly with traffic, or pay-24/7 self-hosted GPUs that bill while idle. Both options break at portfolio-demo and bursty production scales. The harder question is no longer *can you build an agent* — it's *can you build one that doesn't blow your budget the first time someone clicks the button*.
+
+#### 💼 Why This Project Matters
+- **Third Option, Shipped:** Scale-to-zero serverless GPU running a self-hosted Gemma 4 26B A4B MoE. Cost-at-rest in the **low tens of dollars per month**, with sub-linear cost scaling under concurrency via vLLM's continuous batching and PagedAttention
+- **Sixteen Production Trade-offs:** Decision log covering architecture, agent design, serving choices, low-level optimization, and hardware — each entry shaped as *why it matters*, *options*, *what I chose and why*, and *what I gave up*
+- **Multi-Cloud Control Plane:** Best-of-breed per plane — **AWS** control plane (FastAPI, ALB, async submit-and-poll), **Modal** inference plane (vLLM, scale-to-zero), **Redis Cloud** (state, semantic cache, LangGraph checkpoints), **LangFuse Cloud** (traces, cost, observability)
+- **Plan-and-Execute with First-Class Re-planner:** LangGraph agent runtime where the Re-planner is its own node (continue / replace / finish), not a hidden branch — separation of concerns between macro-cognition (Planner) and micro-action (Executor)
+- **Real Pivot-and-Revert Story:** Documents piloting a cheaper-GPU stack (Llama Stack on A10G), measuring a 12+ min warm-path latency, and reverting cleanly in 45 minutes — proving that *warm decode dominates cold start when calls-per-session ≥ 5*
+
+#### 🔧 Key Features
+- **Self-Hosted Gemma 4 26B A4B (MoE):** Sparse architecture with 128 small experts plus one always-on shared expert, 8 active experts per token, ~3.8B parameters computed per forward pass — 30B-class quality at 4B-class decode latency
+- **Serverless GPU on Modal:** vLLM serving Gemma 4 26B AWQ on A100-class hardware; scales to zero between requests, bills by the second
+- **LangGraph Plan-and-Execute:** Planner → Executor (parallel where independent) → Re-planner (continue / replace / finish) → Finalizer, with Redis-backed checkpoints surviving process restarts and load-balancer hops
+- **Async Submit-and-Poll:** Non-blocking API decouples user-facing latency from agent wall-clock
+- **Production Observability:** Full LangFuse tracing across every LLM hop with cost and per-call latency
+- **Quantization Strategy:** 4-bit AWQ with activation-aware calibration; mature vLLM kernels for Ampere; bf16 KV-cache (the only viable option once Gemma 4's `head_dim=512` forces the Triton attention backend)
+- **Tuned KV-Cache Pool:** `max_model_len=16384`, `gpu_memory_utilization` in the 0.92–0.95 band, explicit MoE intermediate headroom
+- **Prefix Caching + Responses API:** Stateful `/v1/responses` endpoint keeps history server-side; KV cache and prefix cache ride the server-side state, removing the dominant cost of every turn after the first
+
+#### 🧩 The Sixteen Trade-offs
+**Architecture-level:** self-hosted Gemma 4 26B A4B MoE vs. Gemma 4 31B dense vs. managed LLM (e.g. GPT-5.4-mini); multi-cloud vs. all-on-AWS; control plane vs. inference plane separation.
+
+**Agent design:** ReAct vs. plan-and-execute; quantization strategy for Gemma 4.
+
+**Serving choices:** AWS vs. Modal; vLLM vs. Unsloth; vLLM vs. Llama Stack (the pivot-and-revert story); GGUF vs. AWQ 4-bit.
+
+**Low-level optimization:** FlashAttention vs. Triton (forced by `head_dim=512`); TurboQuant and KV-cache compression; tuned KV-cache pool vs. vLLM defaults; prefix caching; Responses API vs. Chat Completions; LangGraph state checkpointing with database persistence.
+
+**Hardware:** A10G vs. A100.
+
+#### 🏗️ Architecture
+*Multi-cloud control plane (AWS) ↔ scale-to-zero inference plane (Modal) ↔ managed Redis Stack ↔ managed LangFuse. Full architecture and agent control-flow diagrams in the [public repository README](https://github.com/alexey-tyurin/autonomous-agentic-stack-2026).*
+
+#### 💻 Tech Stack
+```
+Language: Python
+API: FastAPI (async submit-and-poll)
+Agent Runtime: LangGraph (plan-and-execute with first-class Re-planner)
+LLM: Self-hosted Gemma 4 26B A4B MoE (AWQ 4-bit)
+Inference Engine: vLLM
+Inference Platform: Modal (serverless GPU, scale-to-zero, A100-40GB)
+State & Cache: Redis Cloud (managed Redis Stack with RediSearch)
+Observability: LangFuse Cloud
+Control Plane: AWS (ECS Fargate, ALB, Secrets Manager)
+Attention Backend: Triton (forced — Gemma 4 head_dim=512 exceeds FlashAttention's 256 limit)
+KV-Cache: bf16 (the only viable option on Ampere with this checkpoint)
+API Protocol: OpenAI Responses API (stateful /v1/responses endpoint)
+```
+
+#### 📊 Production Trace
+A real LangFuse trace from the running system — submit, plan, parallel executor steps, re-plan, finalize — with end-to-end latency on the order of seconds, not minutes. The visible node names, tool calls, and JSON shapes are the receipts: proof that this graph runs end-to-end against managed observability in production.
+
+#### 📸 Screenshots
+![Production LangFuse Trace](screenshots/autonomous-agentic-stack-2026-trace.png)
+*LangFuse production trace — plan, parallel executor steps, re-plan, finalize. Architecture diagrams and additional visuals in the [public repository README](https://github.com/alexey-tyurin/autonomous-agentic-stack-2026) and the [Google Cloud – Community article](https://medium.com/google-cloud/how-i-shipped-an-autonomous-agentic-system-on-a-2026-serverless-gpu-stack-648658802fd5).*
+
+---
+
+### 2. AI Agent Harness - Production Infrastructure for AI Agents
 **Repository:** [https://github.com/alexey-tyurin/ai-agent-harness](https://github.com/alexey-tyurin/ai-agent-harness)
 
 **Live System:** [https://alexeytyurin.org/ai-agent/](https://alexeytyurin.org/ai-agent/)
@@ -122,7 +191,7 @@ Infrastructure: Docker, ECS Fargate, Terraform
 
 ---
 
-### 2. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI
+### 3. MCP Chaos Monkey - Chaos Engineering Framework for Agentic AI
 **Repository:** [https://github.com/alexey-tyurin/mcp-chaos-monkey](https://github.com/alexey-tyurin/mcp-chaos-monkey)
 
 **Articles (MCP Reliability Series — published in Google Cloud – Community):**
@@ -229,7 +298,7 @@ Shared:
 
 ---
 
-### 3. Reliable MCP - Production Reliability Patterns for Agentic AI
+### 4. Reliable MCP - Production Reliability Patterns for Agentic AI
 **Repository:** [https://github.com/alexey-tyurin/reliable-mcp](https://github.com/alexey-tyurin/reliable-mcp)
 
 **Article (MCP Reliability Series — published in Google Cloud – Community):**
@@ -328,7 +397,7 @@ Deployment: Docker, Docker Compose, multi-container
 
 ---
 
-### 4. RMD Advisor - AI-Powered Retirement Distribution Assistant
+### 5. RMD Advisor - AI-Powered Retirement Distribution Assistant
 **Repository:** [https://github.com/alexey-tyurin/rmd-advisor](https://github.com/alexey-tyurin/rmd-advisor)
 
 **Article:** [Legacy to AI: A Practical Blueprint for Platform Modernization in Financial Services](https://medium.com/@altyurin3/legacy-to-ai-a-practical-blueprint-for-platform-modernization-in-financial-services-b792ee4ff6ac)
@@ -394,7 +463,7 @@ Testing: pytest, curl-based API testing
 
 ---
 
-### 5. Messaging Service - Production-Grade Distributed System (Vibe Engineering Showcase)
+### 6. Messaging Service - Production-Grade Distributed System (Vibe Engineering Showcase)
 **Repository:** [https://github.com/alexey-tyurin/messaging-service](https://github.com/alexey-tyurin/messaging-service)
 
 #### 📋 Description
@@ -488,7 +557,7 @@ Development: Cursor + Claude Sonnet 4.5, Google Antigravity
 
 ---
 
-### 6. A2A Double Validation - POC for Multi-Agent Autonomous System
+### 7. A2A Double Validation - POC for Multi-Agent Autonomous System
 **Repository:** [https://github.com/alexey-tyurin/a2a-double-validation](https://github.com/alexey-tyurin/a2a-double-validation)
 
 #### 📋 Description
@@ -535,7 +604,7 @@ https://www.aiacceleratorinstitute.com/how-to-build-autonomous-ai-agent-with-goo
 
 ---
 
-### 7. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
+### 8. Fine-Tuning GPT for Hospitality - Cost-Effective AI Optimization
 **Repository:** [https://github.com/alexey-tyurin/fine-tuning-gpt](https://github.com/alexey-tyurin/fine-tuning-gpt)
 
 #### 📋 Description
@@ -582,7 +651,7 @@ https://medium.com/@altyurin3/fine-tuning-gpt-4o-mini-for-hospitality-chatbots-o
 
 ---
 
-### 8. AI Agent with MCP - Content Moderation System
+### 9. AI Agent with MCP - Content Moderation System
 **Repository:** [https://github.com/alexey-tyurin/ai-agent-mcp](https://github.com/alexey-tyurin/ai-agent-mcp)
 
 #### 📋 Description
@@ -625,7 +694,7 @@ Testing: Automated test suites, integration testing
 
 ---
 
-### 9. AI Agent - ArXiv Research Paper Intelligence
+### 10. AI Agent - ArXiv Research Paper Intelligence
 **Repository:** [https://github.com/alexey-tyurin/ai-agent](https://github.com/alexey-tyurin/ai-agent)
 
 #### 📋 Description
@@ -664,7 +733,7 @@ APIs: RESTful APIs, rate limiting, error handling
 
 ---
 
-### 10. Imbalanced Datasets - Machine Learning Optimization
+### 11. Imbalanced Datasets - Machine Learning Optimization
 **Repository:** [https://github.com/alexey-tyurin/imbalanced_datasets](https://github.com/alexey-tyurin/imbalanced_datasets)
 
 #### 📋 Description
@@ -706,7 +775,7 @@ Visualization: matplotlib, seaborn, plotly
 
 ## 📊 Project Statistics
 
-- **Total Projects:** 10 major projects with production-ready architectures
+- **Total Projects:** 11 major projects with production-ready architectures
 - **GitHub Stars:** 11+ across repositories
 - **Technologies Used:** 25+ AI/ML frameworks and tools
 - **Cloud Platforms:** Google Cloud (Vertex AI), AWS, Azure with multi-cloud expertise
@@ -724,7 +793,7 @@ Visualization: matplotlib, seaborn, plotly
 - **MCP Reliability Engineering:** Built comprehensive reliability playbook with 9 production patterns, 317 tests, and chaos engineering framework for MCP-based agents
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
-- **Thought Leadership:** Published 8 articles including a **3-part MCP Reliability Series** accepted by **Google Cloud – Community** on Medium — covering production resilience patterns, chaos engineering for TypeScript, and chaos engineering for Python
+- **Thought Leadership:** Published 9 articles in **Google Cloud – Community** on Medium and beyond — including a **3-part MCP Reliability Series** (resilience patterns, chaos engineering in TypeScript and Python) and **a 2026 design log on shipping an autonomous agentic system on a serverless-GPU stack** (sixteen production trade-offs, Gemma 4 26B A4B MoE on Modal, vLLM, LangGraph plan-and-execute)
 - **Open Source Contribution:** Created and published datasets and architectures for GenAI community benefit
 
 ## 📈 Impact Metrics
@@ -771,6 +840,9 @@ Visualization: matplotlib, seaborn, plotly
 ## 📝 Publications
 
 Published articles on Medium (Google Cloud – Community) and AI Accelerator Institute:
+
+**Autonomous Agentic Stack 2026** *(published in Google Cloud – Community)*
+- **[How I Shipped an Autonomous Agentic System on a 2026 Serverless-GPU Stack](https://medium.com/google-cloud/how-i-shipped-an-autonomous-agentic-system-on-a-2026-serverless-gpu-stack-648658802fd5)** — Sixteen production trade-offs covering self-hosted Gemma 4 26B A4B MoE on Modal, vLLM, LangGraph plan-and-execute, multi-cloud control plane, and the pivot-and-revert story behind picking the right inference framework
 
 **MCP Reliability Series** *(all 3 parts published in Google Cloud – Community)*
 - Part 1: **[MCP Reliability Playbook — A 9-Pattern Playbook for Resilient AI Agents](https://medium.com/google-cloud/mcp-reliability-playbook-d1a0b1360f52)** — 9 production resilience patterns for MCP-based agents
