@@ -3,6 +3,7 @@
 ## 📑 Table of Contents
 
 - [About Me](#-about-me)
+- [Open Source Contributions](#-open-source-contributions)
 - [Featured Projects](#-featured-projects)
   - [1. Autonomous Agentic Stack 2026 - Production Agent on Serverless GPU](#1-autonomous-agentic-stack-2026---production-agent-on-serverless-gpu-new)
   - [2. AI Agent Harness - Production Infrastructure for AI Agents](#2-ai-agent-harness---production-infrastructure-for-ai-agents)
@@ -51,6 +52,29 @@ Skilled in guiding teams through complex project phases from ideation to deploym
 - **Data & Events:** Kafka, Redis (Streams, Pub/Sub), PostgreSQL, Oracle, MongoDB, CQRS patterns
 - **Practices:** Performance Engineering & Caching, CI/CD, OpenTelemetry, Agile/Scrum, Technical Writing
 - **Research Focus:** Autonomous agentic systems on serverless GPU infrastructure, MCP production reliability & chaos engineering, multi-cloud agent architectures, plan-and-execute agent design, solving business problems with AI, AI safety, production optimization, cost-effective AI deployment
+
+---
+
+## 🌐 Open Source Contributions
+
+Beyond shipping my own projects, I contribute production code to high-profile open-source AI frameworks owned by well-known brands — features and fixes that are reviewed and merged by the projects' own maintainers.
+
+### AMD GAIA — AI Agent Framework for AMD Ryzen AI
+**Repository:** [https://github.com/amd/gaia](https://github.com/amd/gaia)
+
+[GAIA](https://github.com/amd/gaia) is **AMD's open-source framework** for running generative AI agents locally on AMD Ryzen AI hardware (NPU/GPU acceleration). I am a **recurring, active contributor** to the agent and MCP connector subsystem.
+
+**🚀 Merged feature — per-agent MCP tool-visibility activations** ([PR #1219](https://github.com/amd/gaia/pull/1219), closes [#1005](https://github.com/amd/gaia/issues/1005)):
+- **27 files changed · +2,664 lines** — a substantial feature contribution, not a drive-by fix
+- Designed a per-agent MCP connector activation system that cleanly mirrors GAIA's existing grants ledger (atomic writes, `0600` file mode, per-process lock), enforced the MCP-only guard at the shared API layer every caller flows through, and wired the filter into ChatAgent's tool registration
+- Shipped with **24 new tests** and full documentation; passed the **entire CI suite** with no issues found
+- **Approved and merged by the GAIA maintainer ([@itomek](https://github.com/itomek))**, who noted: *"thorough, well-tested PR."*
+
+**🔍 Found, filed, and fixed two gaps discovered while building #1219:**
+- [**Issue #1226**](https://github.com/amd/gaia/issues/1226) → [**PR #1309**](https://github.com/amd/gaia/pull/1309): emit `connector.activation.changed` SSE events for CLI/SDK activation writes — so activation toggles through *every* interface (HTTP, CLI, SDK) drive the same live Agent UI update (**77 tests** passing)
+- [**Issue #1227**](https://github.com/amd/gaia/issues/1227) → [**PR #1310**](https://github.com/amd/gaia/pull/1310): surface MCP-consuming agents in the Settings → Connectors "Active for" panel — so dynamically-loaded MCP servers correctly show the chat agent as an activatable target
+
+**Why this matters:** Landing a large, well-tested feature in **AMD's flagship local-AI framework** — and getting it approved by their maintainer with zero issues — demonstrates that my engineering meets the production bar of a major hardware vendor's open-source project. Spotting and closing two adjacent gaps (issue → PR) on the same subsystem shows the systems-level ownership expected of a senior+ engineer, not just isolated feature delivery.
 
 ---
 
@@ -286,6 +310,9 @@ Shared:
 ```
 
 #### 📊 Test & Quality Metrics
+**Adoption:**
+- **~300 downloads** to date across the published packages — [npm `mcp-chaos-monkey`](https://www.npmjs.com/package/mcp-chaos-monkey) (TypeScript) and [PyPI `mcp-chaos-monkey`](https://pypi.org/project/mcp-chaos-monkey/) (Python) combined
+
 **TypeScript:**
 - **65 test cases** across 8 test files — controller, all 3 interceptors, admin API, CLI, scenarios, guards
 - **80%+ coverage thresholds** enforced for branches, functions, lines, and statements
@@ -780,6 +807,8 @@ Visualization: matplotlib, seaborn, plotly
 ## 📊 Project Statistics
 
 - **Total Projects:** 11 major projects with production-ready architectures
+- **Open Source Contributions:** Recurring contributor to [AMD GAIA](https://github.com/amd/gaia) — 1 merged feature PR (+2,664 lines, 27 files), 2 follow-up PRs, and 2 issues filed
+- **Package Adoption:** ~300 downloads across published packages (npm + PyPI `mcp-chaos-monkey`)
 - **GitHub Stars:** 11+ across repositories
 - **Technologies Used:** 25+ AI/ML frameworks and tools
 - **Cloud Platforms:** Google Cloud (Vertex AI), AWS, Azure with multi-cloud expertise
@@ -793,7 +822,8 @@ Visualization: matplotlib, seaborn, plotly
 - **AI-Driven Platform Modernization:** Built RMD Advisor demonstrating \$800K+ ROI potential through RAG + legacy Java integration
 - **Vibe Engineering Pioneer:** Demonstrated 10x development velocity using AI tools (Cursor, Claude, Antigravity) while maintaining Staff+ architectural standards
 - **Cost Optimization:** Achieved 90% cost reduction while improving accuracy through strategic fine-tuning
-- **MCP Chaos Engineering Pioneer:** Created the first open-source chaos/fault injection framework for MCP (mcp-chaos-monkey) — available in both TypeScript and Python, adopted for production resilience validation
+- **AMD GAIA Contributor:** Recurring contributor to [AMD's flagship local-AI agent framework](https://github.com/amd/gaia) — shipped a merged feature PR ([#1219](https://github.com/amd/gaia/pull/1219): +2,664 lines across 27 files, approved by the maintainer with *"thorough, well-tested PR"*), plus 2 follow-up PRs and 2 issues closing gaps in the MCP connector subsystem
+- **MCP Chaos Engineering Pioneer:** Created the first open-source chaos/fault injection framework for MCP (mcp-chaos-monkey) — available in both TypeScript and Python with **~300 package downloads** to date, adopted for production resilience validation
 - **MCP Reliability Engineering:** Built comprehensive reliability playbook with 9 production patterns, 317 tests, and chaos engineering framework for MCP-based agents
 - **Security Innovation:** Pioneered double validation architecture for AI agent safety
 - **Cross-Platform Integration:** Successfully integrated multiple AI vendors (OpenAI, Google, Meta) in unified systems
