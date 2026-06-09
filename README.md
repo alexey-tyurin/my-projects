@@ -867,7 +867,7 @@ Visualization: matplotlib, seaborn, plotly
 ## 🔬 Development Methodologies
 
 ### Vibe Engineering (AI-Augmented Development)
-**Tools:** Cursor + Claude Sonnet 4.5, Claude (Anthropic), Google Antigravity
+**Tools:** Cursor + Claude Code, Claude (Anthropic), Google Antigravity
 
 **Approach:**
 - AI handles mechanical complexity (boilerplate, patterns, tests)
